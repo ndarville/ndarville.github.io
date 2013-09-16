@@ -1,3 +1,5 @@
 name: ndarville
+description: "Fun with Programming"
+url: http://ndarville.github.io
 markdown: redcarpet
 pygments: true
