@@ -128,6 +128,10 @@ ul.posts span {
 /*****************************************************************************/
 
 /* standard */
+.post {
+  font-family: Georgia;
+}
+
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
