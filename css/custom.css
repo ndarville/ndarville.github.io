@@ -1,0 +1,28 @@
+.box {
+    width: 85%;
+    margin: 1em auto;
+    padding: 1em;
+    font: 0.8em/1.6em Verdana;
+}
+
+.info,
+.quote {
+    border: 1px solid steelBlue;
+}
+
+.info { background-color: #CCFFCC; }
+.quote { background-color: #F5FAFA; }
+.quote:before {
+    content: "Mike Bostock: ";
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: Georgia;
+}
+
+h3, h4, h5 {
+    margin-top: 1em; margin-bottom: 0.5em;
+    border-top: 1px solid #777;
+    padding-top: 1em;
+}
+
+h4 { font-style: italic; }
