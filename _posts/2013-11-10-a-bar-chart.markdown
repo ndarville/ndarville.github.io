@@ -5,11 +5,15 @@ date:   2013-11-10 17:00:00
 categories: blog
 ---
 <div id="toc">
-    0. [Intro](#intro)
-    1. [A Container for Our Chart](#container)
-        * [Selections](#selections)
-    2. [Coding a Chart Manually, the Stupid Way](#manually)
-    3. [Coding a Chart Programmatically, the Clever Way](#programmatically)
+    <ol>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#container">A Container for Our Chart</a></li>
+            <ul>
+                <li><a href="#selections">Selections</a></li>
+            </ul>
+        <li><a href="#manually">Coding a Chart Manually, the Stupid Way</a></li>
+        <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a></li>
+    </ol>
 </div>
 
 <h3 id="intro">Introduction</h3>
@@ -112,7 +116,7 @@ The main difference between the two examples is that you have to write *where* y
 In JavaScript terminology, we call this concept **selection**.
 
 <div class="info box">
-    The concept of selections is *very* important for you to understand.
+    The concept of selections is <em>very</em> important for you to understand.
 
     Keep reading along, though; you can always go back to brush up.
 </div>
@@ -128,7 +132,7 @@ div.html("Hello World");
 Creating a selection couldn't be easier than `d3.select("body")`. Compare that with the abstruse JavaScript example, and you'll begin to see the advantage of D3.
 
 <div class="quote box">
-    "A selection can be created in myriad ways. Most often you create one by querying a *[selector][selectors]*, which is a special string that identifies desired elements by property, say by name or class (`"div"` or `".foo"`, respectively)."
+    "A selection can be created in myriad ways. Most often you create one by querying a <em><a href="http://www.w3.org/TR/selectors-api/">selectors</a></em>, which is a special string that identifies desired elements by property, say by name or class (<code>"div"</code> or <code>".foo"</code>, respectively)."
 </div>
 
 The method name `append()` might confuse you at first, but remember that we are operating on a *tree-like structure* of HTML, which is the DOM. If you recall, the corresponding method in JavaScript was named `appendChild()`.
@@ -202,7 +206,7 @@ var data = [4, 8, 15, 16, 23, 42];
 Evidently, this approach *sucks*.
 
 <div class="info box">
-    The tedium of doing the chart by hand teaches us a valuable lesson in programming: **Don't Repeat Yourself** (DRY).
+    The tedium of doing the chart by hand teaches us a valuable lesson in programming: <strong>Don't Repeat Yourself</strong> (DRY).
 </div>
 
 <h3 id="programmatically">Coding a Chart Programmatically, the Clever Way</h3>
