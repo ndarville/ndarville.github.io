@@ -149,12 +149,12 @@ Which gives us this:
 
 <style>
     .chart div {
-      font: 10px sans-serif;
-      background-color: steelblue;
-      text-align: right;
-      padding: 3px;
-      margin: 1px;
-      color: white;
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
     }
 </style>
 <div class="chart">
