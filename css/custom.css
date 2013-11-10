@@ -1,3 +1,6 @@
+a, a:visited { color: #00A; }
+
+#toc,
 .box {
     width: 85%;
     margin: 1em auto;
@@ -10,8 +13,13 @@
     border: 1px solid steelBlue;
 }
 
+#toc { background-color: #F5FAFA; }
 .info { background-color: #CCFFCC; }
-.quote { background-color: #F5FAFA; }
+.quote { background-color: beige; }
+.info:before {
+    content: "Note: ";
+    font-weight: bold;
+}
 .quote:before {
     content: "Mike Bostock: ";
     font-weight: bold;
@@ -26,3 +34,9 @@ h3, h4, h5 {
 }
 
 h4 { font-style: italic; }
+
+pre,
+.highlight {
+    margin-left: 2em;
+    margin-right: 2em;
+}
