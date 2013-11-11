@@ -7,18 +7,21 @@ categories: blog
 <div id="toc">
     <ol>
         <li><a href="#intro">Intro</a></li>
-        <li><a href="#container">A Container for Our Chart</a></li>
+        <li><a href="#container">A Container for Our Chart</a>
             <ul>
                 <li><a href="#selections">Selections</a></li>
             </ul>
+        </li>
         <li><a href="#manually">Coding a Chart Manually, the Stupid Way</a></li>
         <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a></li>
+
+        <li><a href="#further-reading">Further Reading</a></li>
     </ol>
 </div>
 
 <h3 id="intro">Introduction</h3>
 
-Say you have some data you want to make into a bar chart with D3. We'll represent the data as an array:
+Say you have some data you want to make into a bar chart with D3. We represent the data as an array, in JavaScript:
 
 ```js
 var data = [4, 8, 15, 16, 23, 42];
@@ -26,8 +29,9 @@ var data = [4, 8, 15, 16, 23, 42];
 
 The goal is to turn it into something like this:
 
+<div class="chart-aperitif"></div>
 <style>
-    .chart div {
+    .chart-aperitif div {
         font: 10px sans-serif;
         background-color: steelblue;
         text-align: right;
@@ -36,16 +40,22 @@ The goal is to turn it into something like this:
         color: white;
     }
 </style>
-<div class="chart">
-    <div style="width: 40px;">4</div>
-    <div style="width: 80px;">8</div>
-    <div style="width: 150px;">15</div>
-    <div style="width: 160px;">16</div>
-    <div style="width: 230px;">23</div>
-    <div style="width: 420px;">42</div>
-</div>
+<script async>
+    var data = [4, 8, 15, 16, 23, 42];
 
-The tutorial spans over three parts that entail creating
+    var x = d3.scale.linear()
+        .domain([0, d3.max(data)])
+        .range([0, 420]);
+
+    d3.select(".chart-aperitif")
+        .selectAll("div")
+            .data(data).enter()
+        .append("div")
+            .style("width", function(d) { return x(d) + "px"; })
+            .text(function(d) { return d; });
+</script>
+
+This tutorial spans over three parts that entail creating
 
 1. A bare-bones version in **HTML**.
 2. Then a more complete chart in **SVG**.
@@ -61,6 +71,12 @@ By the end of this tutorial, you will also be familiar with the important concep
 
 1. Selections
 2. Chaining
+
+and the D3 methods
+
+* `append()`
+* `select()`
+* `selectAll()`
 
 By the end of this tutorial, the finished chart should look like [this][example]. This example code should also help you get over the major humps in wrapping your head around how this works.
 
@@ -82,7 +98,6 @@ To make things even easier, [here][template] is a naked template file you can st
         </script>
     </body>
 </html>
-
 ```
 
 <h3 id="container">A Container for Our Chart</h3>
@@ -165,7 +180,7 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
 
 ```html
 <style>
-    .chart div {
+    .chart-stupid div {
         font: 10px sans-serif;
         background-color: steelblue;
         text-align: right;
@@ -174,7 +189,7 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
         color: white;
     }
 </style>
-<div class="chart">
+<div class="chart-stupid">
     <div style="width: 40px;">4</div>
     <div style="width: 80px;">8</div>
     <div style="width: 150px;">15</div>
@@ -186,7 +201,17 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
 
 Which gives us this:
 
-<div class="chart">
+<style>
+    .chart-stupid div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<div class="chart-stupid">
     <div style="width: 40px;">4</div>
     <div style="width: 80px;">8</div>
     <div style="width: 150px;">15</div>
@@ -221,9 +246,73 @@ var div = body.append("div");
 div.html("Hello World");
 ```
 
-In making a bar chart in a really stupid way, we discovered that creating every single bar in the chart *sucks*.
+In making a bar chart in a really stupid way, we discovered the repetition of creating every single bar in the chart kinda sucked.
+
+We'll be doing *a lot* of appending, if we have to do this for each chart.
+
+```html
+<div class="chart-d3"></div>
+<style type="text/css">
+    .chart-d3 div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var data = [4, 8, 15, 16, 23, 42];
+
+    var x = d3.scale.linear()
+        .domain([0, d3.max(data)])
+        .range([0, 420]);
+
+    d3.select(".chart-d3")
+        .selectAll("div")
+            .data(data).enter()
+        .append("div")
+            .style("width", function(d) { return x(d) + "px"; })
+            .text(function(d) { return d; });
+</script>
+```
+
+<div class="chart-d3"></div>
+<style type="text/css">
+    .chart-d3 div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var data = [4, 8, 15, 16, 23, 42];
+
+    var x = d3.scale.linear()
+        .domain([0, d3.max(data)])
+        .range([0, 420]);
+
+    d3.select(".chart-d3")
+        .selectAll("div")
+            .data(data).enter()
+        .append("div")
+            .style("width", function(d) { return x(d) + "px"; })
+            .text(function(d) { return d; });
+</script>
+
+<h3 id="further-reading">Further Reading</h3>
+
+* <i>[How Selections Work][selections-howto]</i> by Mike Bostock
+* [API Reference for D3 Selections][selections-api]
+* <http://knowledgestockpile.blogspot.dk/2012/01/understanding-selectall-data-enter.html>
 
 
 [example]: http://codepen.io/mbostock/pen/Jaemg
 [template]: /assets/bar-chart/template.html
 [selectors]: http://www.w3.org/TR/selectors-api/
+[selections-howto]: https://github.com/mbostock/d3/wiki/Selections
+[selections-api]: https://github.com/mbostock/d3/wiki/Selections
