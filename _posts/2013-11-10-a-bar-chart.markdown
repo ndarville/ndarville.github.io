@@ -112,7 +112,7 @@ To make things even easier, [here][template] is a naked template file you can st
 
 <h3 id="container">A Container for Our Chart</h3>
 
-You'll want to get your hands dirty at this point and create something. It's a good idea to create a **container** for your chart HTML. We'll use a `<div>` element for this.
+You'll want to get your hands dirty at this point and create something. It's a good idea to create a **container** for your chart HTML. We'll use a `<div>` element that lives inside `<body>` for this.
 
 In **HTML**, we construct the `<div>` container like so:
 
