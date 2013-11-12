@@ -340,9 +340,9 @@ var div = d3.select(".chart-stupid-d3");
 
 "Select chart container; append child bar to it; rinse and repeat."
 
-Evidently, there is a perfectly stupid way to create your bar chart piecemeal with D3.
+Evidently, there is a perfectly stupid way to create your bar chart piecemeal with D3 as well.
 
-Fortunately, this is not how D3 is supposed to be used.
+Fortunately, this is not how D3 is supposed to be used. So let's get to it.
 
 <h4 id="chaining">Chaining</h4>
 
