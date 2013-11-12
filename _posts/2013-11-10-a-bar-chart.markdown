@@ -21,6 +21,8 @@ categories: blog
 
 <h3 id="intro">Introduction</h3>
 
+<i>(This blog post is an attempt to re-write Mike Bostock's own [bar-chart tutorial][original].)</i>
+
 Say you have some data you want to make into a bar chart with D3. We represent the data as an array, in JavaScript:
 
 ```js
@@ -320,12 +322,14 @@ We'll be doing *a lot* of appending, if we have to do this for each chart.
 
 <h3 id="further-reading">Further Reading</h3>
 
+* <i>[Let’s Make a Bar Chart][original] by Mike Bostock
 * <i>[How Selections Work][selections-howto]</i> by Mike Bostock
 * [API Reference for D3 Selections][selections-api]
 * <http://knowledgestockpile.blogspot.dk/2012/01/understanding-selectall-data-enter.html>
 * <http://bost.ocks.org/mike/nest/>
 
 
+[original]: http://bost.ocks.org/mike/bar/
 [example]: http://codepen.io/mbostock/pen/Jaemg
 [template]: /assets/bar-chart/template.html
 [selectors]: http://www.w3.org/TR/selectors-api/
