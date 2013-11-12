@@ -62,6 +62,10 @@ The goal is to turn it into something like this:
             .text(function(d) { return d; });
 </script>
 
+<div class="info box">
+    <em>All</em> charts in this tutorial are rendered code. This tutorial contains <em>no</em> images.
+</div>
+
 This tutorial spans over three parts that entail creating
 
 1. A bare-bones version in **HTML**.
