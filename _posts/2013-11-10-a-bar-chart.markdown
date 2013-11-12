@@ -279,7 +279,7 @@ Great approaches both, but the HTML approach revealed its weakness, when we had 
 </div>
 ```
 
-As a Dane writing in English, let me assure you that you can speak stupid in any language; this is what a similar piecemeal approach looks like with D3:
+As a Dane writing in English, let me assure you that you can speak stupid in any language; a similar piecemeal approach with D3 looks like *this*:
 
 ```js
 var div = d3.select(".chart-stupid-d3");
