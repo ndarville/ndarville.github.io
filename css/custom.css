@@ -1,6 +1,7 @@
 .site {
     text-align: left;
     margin-left: 1em;
+    margin-right: 1em;
 }
 
 a, a:visited { color: #00A; }
