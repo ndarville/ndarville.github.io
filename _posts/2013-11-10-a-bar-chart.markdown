@@ -346,7 +346,7 @@ Fortunately, this is not how D3 is supposed to be used. So let's get to it.
 
 <h4 id="chaining">Chaining</h4>
 
-Chaining is the first line of attack against stupid code that allows us to give the above code example a fantastic make-over:
+**Chaining** is the first line of attack against stupid code, allowing us to treat the above code example to an extreme make-over:
 
 ```js
 var div = d3.select(".chart-stupid-d3");
@@ -404,7 +404,7 @@ var div = d3.select(".chart-stupid-d3");
 </script>
 
 <div class="quote box">
-    There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements.
+    "There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements."
 </div>
 
 --->
