@@ -266,7 +266,7 @@ div.html("Hello World");
 <div>Hello, world!</div>
 ```
 
-Great approaches both, both the HTML approach revealed its weakness, when we had to create several `<div>` bars for our chart:
+Great approaches both, but the HTML approach revealed its weakness, when we had to create several `<div>` bars for our chart:
 
 ```html
 <div class="chart-stupid">
