@@ -1,4 +1,7 @@
-.site { text-align: left; }
+.site {
+    text-align: left;
+    margin-left: 1em;
+}
 
 a, a:visited { color: #00A; }
 
@@ -43,6 +46,7 @@ pre,
 .highlight {
     margin-left: 2em;
     margin-right: 2em;
+    overflow: auto;
 }
 
 #history {
