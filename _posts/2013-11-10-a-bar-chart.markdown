@@ -246,9 +246,23 @@ var div = body.append("div");
 div.html("Hello World");
 ```
 
+**(Explain.)**
+
+* * *
+
+Let us try to mimic the stupid HTML-based approach to creating our bar chart---with D3:
+
+* * *
+
 In making a bar chart in a really stupid way, we discovered the repetition of creating every single bar in the chart kinda sucked.
 
 We'll be doing *a lot* of appending, if we have to do this for each chart.
+
+---> ...
+
+* * *
+
+---> ...
 
 ```html
 <div class="chart-d3"></div>
@@ -309,6 +323,7 @@ We'll be doing *a lot* of appending, if we have to do this for each chart.
 * <i>[How Selections Work][selections-howto]</i> by Mike Bostock
 * [API Reference for D3 Selections][selections-api]
 * <http://knowledgestockpile.blogspot.dk/2012/01/understanding-selectall-data-enter.html>
+* <http://bost.ocks.org/mike/nest/>
 
 
 [example]: http://codepen.io/mbostock/pen/Jaemg
