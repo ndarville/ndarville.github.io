@@ -78,12 +78,15 @@ By the end of this tutorial, you will also be familiar with the important concep
 
 1. Selections
 2. Chaining
+3. Data joins
 
 and the D3 methods
 
 * `append()`
 * `select()`
 * `selectAll()`
+* `.data()`
+* `.enter()`
 
 By the end of this tutorial, the finished chart should look like [this][example]. This example code should also help you get over the major humps in wrapping your head around how this works.
 
