@@ -396,6 +396,10 @@ var div = d3.select(".chart-stupid-d3");
             .text(42);
 </script>
 
+<div class="quote box">
+    There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements.
+</div>
+
 --->
 
 <h4 id="functions">Return of the Functions</h4>
