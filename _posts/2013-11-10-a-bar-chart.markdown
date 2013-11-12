@@ -13,8 +13,12 @@ categories: blog
             </ul>
         </li>
         <li><a href="#manually">Coding a Chart Manually, the Stupid Way</a></li>
-        <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a></li>
-
+        <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a>
+            <ul>
+                <li><a href="#chaining">Chaining</a></li>
+                <li><a href="#scaling">Scaling to Fit</a></li>
+            </ul>
+        </li>
         <li><a href="#further-reading">Further Reading</a></li>
     </ol>
 </div>
@@ -240,7 +244,7 @@ Evidently, this approach *sucks*.
 
 Remember how you learnt to make a container with HTML, JavaScript, and D3, and touched on the concept of selections?
 
-This was how we did it in D3:
+This was how we created one `<div>` inside a `<body>` with D3:
 
 ```js
 var body = d3.select("body");
@@ -248,28 +252,207 @@ var div = body.append("div");
 div.html("Hello World");
 ```
 
-**(Explain.)**
-
-* * *
-
-Let us try to mimic the stupid HTML-based approach to creating our bar chart---with D3:
-
-* * *
-
-In making a bar chart in a really stupid way, we discovered the repetition of creating every single bar in the chart kinda sucked.
-
-We'll be doing *a lot* of appending, if we have to do this for each chart.
-
----> ...
-
-* * *
-
----> ...
+... which was the same as doing this in HTML:
 
 ```html
-<div class="chart-d3"></div>
+<div>Hello, world!</div>
+```
+
+Great approaches both, both the HTML approach revealed its weakness, when we had to create several `<div>` bars for our chart:
+
+```html
+<div class="chart-stupid">
+    <div style="width: 40px;">4</div>
+    <div style="width: 80px;">8</div>
+    <div style="width: 150px;">15</div>
+    <div style="width: 160px;">16</div>
+    <div style="width: 230px;">23</div>
+    <div style="width: 420px;">42</div>
+</div>
+```
+
+As a Dane writing in English, let me assure you that you can speak stupid in any language; this is what a similar piecemeal approach looks like with D3:
+
+```js
+var div = d3.select(".chart-stupid-d3");
+    var div1 = div.append("div");
+        div1.style("width", "40px");
+        div1.text(4);
+    var div2 = div.append("div");
+        div2.style("width", "80px");
+        div2.text(8);
+    var div3 = div.append("div");
+        div3.style("width", "150px");
+        div3.text(15);
+    var div4 = div.append("div");
+        div4.style("width", "160px");
+        div4.text(16);
+    var div5 = div.append("div");
+        div5.style("width", "230px");
+        div5.text(23);
+    var div6 = div.append("div");
+        div6.style("width", "420px");
+        div6.text(42);
+```
+
+<div class="chart-stupid-d3"></div>
 <style type="text/css">
-    .chart-d3 div {
+    .chart-stupid-d3 div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var div = d3.select(".chart-stupid-d3");
+        var div1 = div.append("div");
+            div1.style("width", "40px");
+            div1.text(4);
+        var div2 = div.append("div");
+            div2.style("width", "80px");
+            div2.text(8);
+        var div3 = div.append("div");
+            div3.style("width", "150px");
+            div3.text(15);
+        var div4 = div.append("div");
+            div4.style("width", "160px");
+            div4.text(16);
+        var div5 = div.append("div");
+            div5.style("width", "230px");
+            div5.text(23);
+        var div6 = div.append("div");
+            div6.style("width", "420px");
+            div6.text(42);
+</script>
+
+(I snuck in a `.style()` method you haven't seen in your introduction to D3.)
+
+Evidently, there is a perfectly stupid way to create your bar chart piecemeal with D3.
+
+Fortunately, this is not the way D3 is supposed to be used.
+
+<h4 id="chaining">Chaining</h4>
+
+Chaining is the first line of attack against stupid code that allows us to give the above code example a fantastic make-over:
+
+```js
+var div = d3.select(".chart-stupid-d3");
+    div.append("div")
+        .style("width", "40px")
+        .text(4);
+    div.append("div")
+        .style("width", "80px")
+        .text(8);
+    div.append("div")
+        .style("width", "150px")
+        .text(15);
+    div.append("div")
+        .style("width", "160px")
+        .text(16);
+    div.append("div")
+        .style("width", "230px")
+        .text(23);
+    div.append("div")
+        .style("width", "420px")
+        .text(42);
+```
+
+<div class="chart-stupid-chained"></div>
+<style type="text/css">
+    .chart-stupid-chained div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var div = d3.select(".chart-stupid-chained");
+        div.append("div")
+            .style("width", "40px")
+            .text(4);
+        div.append("div")
+            .style("width", "80px")
+            .text(8);
+        div.append("div")
+            .style("width", "150px")
+            .text(15);
+        div.append("div")
+            .style("width", "160px")
+            .text(16);
+        div.append("div")
+            .style("width", "230px")
+            .text(23);
+        div.append("div")
+            .style("width", "420px")
+            .text(42);
+</script>
+
+--->
+
+<h4 id="foo">Programmatic</h4>
+
+--->
+
+```html
+<div class="chart-programmatic"></div>
+<style type="text/css">
+    .chart-programmatic div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var data = [4, 8, 15, 16, 23, 42];
+
+    d3.select(".chart-programmatic")
+        .selectAll("div")
+            .data(data).enter()
+        .append("div")
+            .style("width", function(d) { return d*10 + "px"; })
+            .text(function(d) { return d; });
+</script>
+```
+
+<div class="chart-programmatic"></div>
+<style type="text/css">
+    .chart-programmatic div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var data = [4, 8, 15, 16, 23, 42];
+
+    d3.select(".chart-programmatic")
+        .selectAll("div")
+            .data(data).enter()
+        .append("div")
+            .style("width", function(d) { return d*10 + "px"; })
+            .text(function(d) { return d; });
+</script>
+
+<h4 id="scaling">Scaling to Fit</h4>
+
+--->
+
+```html
+<div class="chart-scaled"></div>
+<style type="text/css">
+    .chart-scaled div {
         font: 10px sans-serif;
         background-color: steelblue;
         text-align: right;
@@ -285,7 +468,7 @@ We'll be doing *a lot* of appending, if we have to do this for each chart.
         .domain([0, d3.max(data)])
         .range([0, 420]);
 
-    d3.select(".chart-d3")
+    d3.select(".chart-scaled")
         .selectAll("div")
             .data(data).enter()
         .append("div")
@@ -294,9 +477,9 @@ We'll be doing *a lot* of appending, if we have to do this for each chart.
 </script>
 ```
 
-<div class="chart-d3"></div>
+<div class="chart-scaled"></div>
 <style type="text/css">
-    .chart-d3 div {
+    .chart-scaled div {
         font: 10px sans-serif;
         background-color: steelblue;
         text-align: right;
@@ -312,13 +495,15 @@ We'll be doing *a lot* of appending, if we have to do this for each chart.
         .domain([0, d3.max(data)])
         .range([0, 420]);
 
-    d3.select(".chart-d3")
+    d3.select(".chart-scaled")
         .selectAll("div")
             .data(data).enter()
         .append("div")
             .style("width", function(d) { return x(d) + "px"; })
             .text(function(d) { return d; });
 </script>
+
+--->
 
 <h3 id="further-reading">Further Reading</h3>
 
