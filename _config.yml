@@ -1,6 +1,7 @@
 name: ndarville
 description: "Fun with Charts"
 url: http://ndarville.github.io
+repo: https://github.com/ndarville/ndarville.github.io/
 
 markdown: redcarpet
 redcarpet:
