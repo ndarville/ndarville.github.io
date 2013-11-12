@@ -141,9 +141,9 @@ The main difference between the two examples is that you have to write *where* y
 In JavaScript terminology, we call this concept **selection**.
 
 <div class="info box">
-    The concept of selections is <em>very</em> important for you to understand.
+    The concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
 
-    Keep reading along, though; you can always go back to brush up.
+    <p>Keep reading along, though; you can always go back to brush up.</p>
 </div>
 
 With this in mind, look at how we perform the same task as above with **D3**:
