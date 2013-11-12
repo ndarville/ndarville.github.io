@@ -521,7 +521,7 @@ var div = d3.select(".chart-stupid-d3");
 
 <h3 id="further-reading">Further Reading</h3>
 
-* <i>[Let’s Make a Bar Chart][original] by Mike Bostock
+* <i>[Let’s Make a Bar Chart][original]</i> by Mike Bostock
 * <i>[How Selections Work][selections-howto]</i> by Mike Bostock
 * [API Reference for D3 Selections][selections-api]
 * <http://knowledgestockpile.blogspot.dk/2012/01/understanding-selectall-data-enter.html>
