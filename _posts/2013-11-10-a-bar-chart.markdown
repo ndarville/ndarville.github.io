@@ -16,6 +16,7 @@ categories: blog
         <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a>
             <ul>
                 <li><a href="#chaining">Chaining</a></li>
+                <li><a href="#functions">Return of the Functions</a></li>
                 <li><a href="#scaling">Scaling to Fit</a></li>
             </ul>
         </li>
@@ -395,7 +396,7 @@ var div = d3.select(".chart-stupid-d3");
 
 --->
 
-<h4 id="foo">Programmatic</h4>
+<h4 id="functions">Return of the Functions</h4>
 
 --->
 
