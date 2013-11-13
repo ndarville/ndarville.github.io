@@ -248,6 +248,10 @@ Evidently, this approach *sucks*.
     The tedium of doing the chart by hand teaches us a valuable lesson in programming: <strong>Don't Repeat Yourself</strong> (DRY).
 </div>
 
+<div class="box info">
+    Avoid repeating yourself, <strong>generalize and automate</strong> your code.
+</div>
+
 <h3 id="programmatically">Coding a Chart Programmatically, the Clever Way</h3>
 
 Remember how you learnt to make a container with HTML, JavaScript, and D3, and touched on the concept of selections?
@@ -429,50 +433,37 @@ div.append("div")
     .text(val);
 ```
 
-This approach means we don't have to pass and calculate our values anymore; we only have to define them. In other words, we are repeating ourselves less.
+This approach means we don't have to pass and calculate our values anymore; we only have to define them. In other words, we are repeating ourselves less by generalizing the code.
 
 When we apply this approach to our entire bar chart, we get this:
 
-```html
-<div class="chart-times-ten"></div>
-<style type="text/css">
-    .chart-times-ten div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
-<script async>
-    var val = 0;
-    var div = d3.select(".chart-times-ten");
-        val = 4;
-        div.append("div")
-            .style("width", val * 10 + "px")
-            .text(val);
-        val = 8;
-        div.append("div")
-            .style("width", val * 10 + "px")
-            .text(val);
-        val = 15;
-        div.append("div")
-            .style("width", val * 10 + "px")
-            .text(val);
-        val = 16;
-        div.append("div")
-            .style("width", val * 10 + "px")
-            .text(val);
-        val = 23;
-        div.append("div")
-            .style("width", val * 10 + "px")
-            .text(val);
-        val = 42;
-        div.append("div")
-            .style("width", val * 10 + "px")
-            .text(val);
-</script>
+```js
+var val = 0;
+var div = d3.select(".chart-times-ten");
+    val = 4;
+    div.append("div")
+        .style("width", val*10 + "px")
+        .text(val);
+    val = 8;
+    div.append("div")
+        .style("width", val*10 + "px")
+        .text(val);
+    val = 15;
+    div.append("div")
+        .style("width", val*10 + "px")
+        .text(val);
+    val = 16;
+    div.append("div")
+        .style("width", val*10 + "px")
+        .text(val);
+    val = 23;
+    div.append("div")
+        .style("width", val*10 + "px")
+        .text(val);
+    val = 42;
+    div.append("div")
+        .style("width", val*10 + "px")
+        .text(val);
 ```
 
 <div class="chart-times-ten"></div>
@@ -491,58 +482,53 @@ When we apply this approach to our entire bar chart, we get this:
     var div = d3.select(".chart-times-ten");
         val = 4;
         div.append("div")
-            .style("width", val * 10 + "px")
+            .style("width", val*10 + "px")
             .text(val);
         val = 8;
         div.append("div")
-            .style("width", val * 10 + "px")
+            .style("width", val*10 + "px")
             .text(val);
         val = 15;
         div.append("div")
-            .style("width", val * 10 + "px")
+            .style("width", val*10 + "px")
             .text(val);
         val = 16;
         div.append("div")
-            .style("width", val * 10 + "px")
+            .style("width", val*10 + "px")
             .text(val);
         val = 23;
         div.append("div")
-            .style("width", val * 10 + "px")
+            .style("width", val*10 + "px")
             .text(val);
         val = 42;
         div.append("div")
-            .style("width", val * 10 + "px")
+            .style("width", val*10 + "px")
             .text(val);
 </script>
 
-In order to take this to the next level, we need to be able to be able to read from our dataset, so we don't have to type it our manually ourselves.
+This is *still* repetitive; ideally, we want something like this:
 
-(In order to do this, we need to use **data joins**.)
+```js
+var data = [4, 8, 15, 16, 23, 42];
+var div = d3.select(".chart-times-ten");
+    // for d in data
+    div.append("div")
+        .style("width", d*10 + "px")
+        .text(d);
+```
+
+To achieve this (...) **data joins**.
 
 --->
 
-```html
-<div class="chart-programmatic"></div>
-<style type="text/css">
-    .chart-programmatic div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
-<script async>
-    var data = [4, 8, 15, 16, 23, 42];
-
-    d3.select(".chart-programmatic")
-        .selectAll("div")
-            .data(data).enter()
-        .append("div")
-            .style("width", function(d) { return d*10 + "px"; })
-            .text(function(d) { return d; });
-</script>
+```js
+var data = [4, 8, 15, 16, 23, 42];
+d3.select(".chart-programmatic")
+    .selectAll("div")
+        .data(data).enter()
+    .append("div")
+        .style("width", function(d) { return d*10 + "px"; })
+        .text(function(d) { return d; });
 ```
 
 <div class="chart-programmatic"></div>
@@ -566,10 +552,6 @@ In order to take this to the next level, we need to be able to be able to read f
             .style("width", function(d) { return d*10 + "px"; })
             .text(function(d) { return d; });
 </script>
-
---->
-
-Data joins:
 
 --->
 
@@ -577,32 +559,19 @@ Data joins:
 
 --->
 
-```html
-<div class="chart-scaled"></div>
-<style type="text/css">
-    .chart-scaled div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
-<script async>
-    var data = [4, 8, 15, 16, 23, 42];
+```js
+var data = [4, 8, 15, 16, 23, 42];
 
-    var x = d3.scale.linear()
-        .domain([0, d3.max(data)])
-        .range([0, 420]);
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
 
-    d3.select(".chart-scaled")
-        .selectAll("div")
-            .data(data).enter()
-        .append("div")
-            .style("width", function(d) { return x(d) + "px"; })
-            .text(function(d) { return d; });
-</script>
+d3.select(".chart-scaled")
+    .selectAll("div")
+        .data(data).enter()
+    .append("div")
+        .style("width", function(d) { return x(d) + "px"; })
+        .text(function(d) { return d; });
 ```
 
 <div class="chart-scaled"></div>
