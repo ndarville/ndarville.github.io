@@ -16,7 +16,7 @@ categories: blog
         <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a>
             <ul>
                 <li><a href="#chaining">Chaining</a></li>
-                <li><a href="#functions">Return of the Functions</a></li>
+                <a href="#functions-data-join">Return of the Functions, and a New Data Join</a></li>
                 <li><a href="#scaling">Scaling to Fit</a></li>
             </ul>
         </li>
@@ -409,7 +409,115 @@ var div = d3.select(".chart-stupid-d3");
 
 --->
 
-<h4 id="functions">Return of the Functions</h4>
+<h4 id="functions-data-join">Return of the Functions, and a New Data Join</h4>
+
+When we defined the width of our bars, in both HTML and D3, we took our values, multiplied them by ten, and passed them as our width value. Here is a reminder:
+
+```js
+// The value is 4
+div.append("div")
+    .style("width", "40px")
+    .text(4);
+```
+
+We did all this by hand, but why do this calculation piecemeal, when there is a smarter way to go about it:
+
+```js
+var val = 4;
+div.append("div")
+    .style("width", val*10 + "px")
+    .text(val);
+```
+
+This approach means we don't have to pass and calculate our values anymore; we only have to define them. In other words, we are repeating ourselves less.
+
+When we apply this approach to our entire bar chart, we get this:
+
+```html
+<div class="chart-times-ten"></div>
+<style type="text/css">
+    .chart-times-ten div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var val = 0;
+    var div = d3.select(".chart-times-ten");
+        val = 4;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 8;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 15;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 16;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 23;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 42;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+</script>
+```
+
+<div class="chart-times-ten"></div>
+<style type="text/css">
+    .chart-times-ten div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    var val = 0;
+    var div = d3.select(".chart-times-ten");
+        val = 4;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 8;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 15;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 16;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 23;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+        val = 42;
+        div.append("div")
+            .style("width", val * 10 + "px")
+            .text(val);
+</script>
+
+In order to take this to the next level, we need to be able to be able to read from our dataset, so we don't have to type it our manually ourselves.
+
+(In order to do this, we need to use **data joins**.)
 
 --->
 
@@ -458,6 +566,12 @@ var div = d3.select(".chart-stupid-d3");
             .style("width", function(d) { return d*10 + "px"; })
             .text(function(d) { return d; });
 </script>
+
+--->
+
+Data joins:
+
+--->
 
 <h4 id="scaling">Scaling to Fit</h4>
 
