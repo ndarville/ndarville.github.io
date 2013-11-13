@@ -433,7 +433,7 @@ div.append("div")
     .text(val);
 ```
 
-This approach means we don't have to pass and calculate our values anymore; we only have to define them. In other words, we are repeating ourselves less by generalizing the code.
+This approach means we don't have to pass and calculate our values anymore; we only have to define them. In other words, we are repeating ourselves less by **generalizing** the code.
 
 When we apply this approach to our entire bar chart, we get this:
 
@@ -552,6 +552,10 @@ d3.select(".chart-programmatic")
             .style("width", function(d) { return d*10 + "px"; })
             .text(function(d) { return d; });
 </script>
+
+--->
+
+(...) **automating the code**.
 
 --->
 
