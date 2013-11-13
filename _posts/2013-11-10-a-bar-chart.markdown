@@ -249,7 +249,7 @@ Evidently, this approach *sucks*.
 </div>
 
 <div class="box info">
-    Avoid repeating yourself, <strong>generalize and automate</strong> your code.
+    To avoid repeating yourself, <strong>generalize and automate</strong> your code.
 </div>
 
 <h3 id="programmatically">Coding a Chart Programmatically, the Clever Way</h3>
