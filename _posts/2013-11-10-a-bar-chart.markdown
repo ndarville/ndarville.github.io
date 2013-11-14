@@ -36,9 +36,9 @@ var data = [4, 8, 15, 16, 23, 42];
 
 The goal is to turn it into something like this:
 
-<div class="chart-aperitif"></div>
+<div class="chart chart-aperitif"></div>
 <style>
-    .chart-aperitif div {
+    .chart div {
         font: 10px sans-serif;
         background-color: steelblue;
         text-align: right;
@@ -102,7 +102,14 @@ To make things even easier, [here][template] is a naked template file you can st
     <head>
         <meta charset="utf-8">
         <style>
-            /** Custom CSS goes here */
+            .chart div {
+                font: 10px sans-serif;
+                background-color: steelblue;
+                text-align: right;
+                padding: 3px;
+                margin: 1px;
+                color: white;
+            }
         </style>
     </head>
     <body>
@@ -194,7 +201,7 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
 
 ```html
 <style>
-    .chart-stupid div {
+    .chart div {
         font: 10px sans-serif;
         background-color: steelblue;
         text-align: right;
@@ -203,7 +210,7 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
         color: white;
     }
 </style>
-<div class="chart-stupid">
+<div class="chart chart-stupid">
     <div style="width: 40px;">4</div>
     <div style="width: 80px;">8</div>
     <div style="width: 150px;">15</div>
@@ -215,17 +222,7 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
 
 Which gives us this:
 
-<style>
-    .chart-stupid div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
-<div class="chart-stupid">
+<div class="chart chart-stupid">
     <div style="width: 40px;">4</div>
     <div style="width: 80px;">8</div>
     <div style="width: 150px;">15</div>
@@ -307,17 +304,7 @@ var div = d3.select(".chart-stupid-d3");
         div6.text(42);
 ```
 
-<div class="chart-stupid-d3"></div>
-<style type="text/css">
-    .chart-stupid-d3 div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
+<div class="chart chart-stupid-d3"></div>
 <script async>
     var div = d3.select(".chart-stupid-d3");
         var div1 = div.append("div");
@@ -374,17 +361,7 @@ var div = d3.select(".chart-stupid-d3");
         .text(42);
 ```
 
-<div class="chart-stupid-chained"></div>
-<style type="text/css">
-    .chart-stupid-chained div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
+<div class="chart chart-stupid-chained"></div>
 <script async>
     var div = d3.select(".chart-stupid-chained");
         div.append("div")
@@ -416,17 +393,7 @@ d3.select(".chart-stupid-d3")
         .text(4);
 ```
 
-<div class="chart-one-bar"></div>
-<style type="text/css">
-    .chart-one-bar div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
+<div class="chart chart-one-bar"></div>
 <script async>
     d3.select(".chart-one-bar")
         .append("div")
@@ -497,17 +464,7 @@ var div = d3.select(".chart-times-ten");
         .text(val);
 ```
 
-<div class="chart-times-ten"></div>
-<style type="text/css">
-    .chart-times-ten div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
+<div class="chart chart-times-ten"></div>
 <script async>
     var val = 0;
     var div = d3.select(".chart-times-ten");
@@ -562,17 +519,7 @@ d3.select(".chart-programmatic")
         .text(function(d) { return d; });
 ```
 
-<div class="chart-programmatic"></div>
-<style type="text/css">
-    .chart-programmatic div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
+<div class="chart chart-programmatic"></div>
 <script async>
     var data = [4, 8, 15, 16, 23, 42];
 
@@ -609,17 +556,7 @@ d3.select(".chart-scaled")
         .text(function(d) { return d; });
 ```
 
-<div class="chart-scaled"></div>
-<style type="text/css">
-    .chart-scaled div {
-        font: 10px sans-serif;
-        background-color: steelblue;
-        text-align: right;
-        padding: 3px;
-        margin: 1px;
-        color: white;
-    }
-</style>
+<div class="chart chart-scaled"></div>
 <script async>
     var data = [4, 8, 15, 16, 23, 42];
 
