@@ -233,6 +233,8 @@ Which gives us this:
 
 This isn't a screenshot, but actual HTML; check it out.
 
+The CSS will be the same for all the following examples, so just use the same for those.
+
 If you wonder where we got the values from, we got them from our `data`:
 
 ```js
@@ -246,7 +248,7 @@ Evidently, this approach *sucks*.
 </div>
 
 <div class="box info">
-    To avoid repeating yourself, <strong>generalize and automate</strong> your code.
+    To avoid repeating yourself, <strong>generalize</strong> and <strong>automate</strong> your code.
 </div>
 
 <h3 id="programmatically">Coding a Chart Programmatically, the Clever Way</h3>
@@ -270,7 +272,7 @@ div.html("Hello World");
 Great approaches both, but the HTML approach revealed its weakness, when we had to create several `<div>` bars for our chart:
 
 ```html
-<div class="chart-stupid">
+<div class="chart chart-stupid">
     <div style="width: 40px;">4</div>
     <div style="width: 80px;">8</div>
     <div style="width: 150px;">15</div>
@@ -340,7 +342,7 @@ Fortunately, this is not how D3 is supposed to be used. So let's get to it.
 **Chaining** is the first line of attack against stupid code, allowing us to treat the above code example to an extreme make-over:
 
 ```js
-var div = d3.select(".chart-stupid-d3");
+var div = d3.select(".chart-stupid-chained");
     div.append("div")
         .style("width", "40px")
         .text(4);
@@ -387,7 +389,7 @@ var div = d3.select(".chart-stupid-d3");
 If we had only *one* bar, we could chain our methods with no `div` variable like so:
 
 ```js
-d3.select(".chart-stupid-d3")
+d3.select(".chart-one-bar")
     .append("div")
         .style("width", "40px")
         .text(4);
@@ -498,7 +500,7 @@ This is *still* repetitive; ideally, we want something like this:
 
 ```js
 var data = [4, 8, 15, 16, 23, 42];
-var div = d3.select(".chart-times-ten");
+var div = d3.select(".chart");
     // for d in data
     div.append("div")
         .style("width", d*10 + "px")
