@@ -578,16 +578,20 @@ d3.select(".chart-scaled")
 
 <h3 id="further-reading">Further Reading</h3>
 
-* <i>[Let’s Make a Bar Chart][original]</i> by Mike Bostock
+You can read the next chapters of Mike Bostocks bar-chart tutorials starting from [here][bar-tut-2].
+
 * <i>[How Selections Work][selections-howto]</i> by Mike Bostock
 * [API Reference for D3 Selections][selections-api]
-* <http://knowledgestockpile.blogspot.dk/2012/01/understanding-selectall-data-enter.html>
-* <http://bost.ocks.org/mike/nest/>
+* <i>[Understanding selectAll, data, enter, append sequence in D3.js][understanding]</i>
+* <i>[Nested Selections][nested]</i> by Mike Bostock
 
 
 [original]: http://bost.ocks.org/mike/bar/
 [example]: http://codepen.io/mbostock/pen/Jaemg
 [template]: /assets/bar-chart/template.html
 [selectors]: http://www.w3.org/TR/selectors-api/
-[selections-howto]: https://github.com/mbostock/d3/wiki/Selections
+[bar-tut-2]: http://bost.ocks.org/mike/bar/2/
+[selections-howto]: http://bost.ocks.org/mike/selection/
 [selections-api]: https://github.com/mbostock/d3/wiki/Selections
+[understanding]: http://knowledgestockpile.blogspot.com/2012/01/understanding-selectall-data-enter.html
+[nested]: http://bost.ocks.org/mike/nest/
