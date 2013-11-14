@@ -407,9 +407,40 @@ var div = d3.select(".chart-stupid-d3");
             .text(42);
 </script>
 
+If we had only *one* bar, we could chain our methods with no `div` variable like so:
+
+```js
+d3.select(".chart-stupid-d3")
+    .append("div")
+        .style("width", "40px")
+        .text(4);
+```
+
+<div class="chart-one-bar"></div>
+<style type="text/css">
+    .chart-one-bar div {
+        font: 10px sans-serif;
+        background-color: steelblue;
+        text-align: right;
+        padding: 3px;
+        margin: 1px;
+        color: white;
+    }
+</style>
+<script async>
+    d3.select(".chart-one-bar")
+        .append("div")
+            .style("width", "40px")
+            .text(4);
+</script>
+
+Sifu Bostock explains:
+
 <div class="quote box">
     "There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements."
 </div>
+
+Hence why we needed our `div` variable, when we appended several bars, as omitting `div` would nest our bars inside each other instead of inside our chart container, `div`.
 
 --->
 
