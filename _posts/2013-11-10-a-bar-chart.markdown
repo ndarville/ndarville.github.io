@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A Bar Chart"
+id:     1
 date:   2013-11-10 17:00:00
 categories: blog
 ---
@@ -92,8 +93,6 @@ and the D3 methods
 * `.data()`
 * `.enter()`
 
-By the end of this tutorial, the finished chart should look like [this][example]. This example code should also help you get over the major humps in wrapping your head around how this works.
-
 To make things even easier, [here][template] is a naked template file you can start out with. You can right-click to save it or copy it from here:
 
 ```html
@@ -152,7 +151,7 @@ The main difference between the two examples is that you have to write *where* y
 In JavaScript terminology, we call this concept **selection**.
 
 <div class="info box">
-    The concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
+    all charThe concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
 
     <p>Keep reading along, though; you can always go back to brush up.</p>
 </div>
@@ -587,7 +586,6 @@ You can read the next chapters of Mike Bostock's bar-chart tutorials starting fr
 
 
 [original]: http://bost.ocks.org/mike/bar/
-[example]: http://codepen.io/mbostock/pen/Jaemg
 [template]: /assets/bar-chart/template.html
 [selectors]: http://www.w3.org/TR/selectors-api/
 [bar-tut-2]: http://bost.ocks.org/mike/bar/2/
