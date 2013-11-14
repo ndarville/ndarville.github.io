@@ -9,4 +9,3 @@ redcarpet:
 pygments: true
 
 limit_posts: 0
-excerpt_separator: ""
