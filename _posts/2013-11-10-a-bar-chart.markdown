@@ -578,7 +578,7 @@ d3.select(".chart-scaled")
 
 <h3 id="further-reading">Further Reading</h3>
 
-You can read the next chapters of Mike Bostocks bar-chart tutorials starting from [here][bar-tut-2].
+You can read the next chapters of Mike Bostock's bar-chart tutorials starting from [here][bar-tut-2].
 
 * <i>[How Selections Work][selections-howto]</i> by Mike Bostock
 * [API Reference for D3 Selections][selections-api]
