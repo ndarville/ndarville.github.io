@@ -4,8 +4,9 @@ body {
 
 .site {
     text-align: left;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 a, a:visited { color: #00A; }
