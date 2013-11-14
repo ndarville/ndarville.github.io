@@ -16,7 +16,7 @@ categories: blog
         <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a>
             <ul>
                 <li><a href="#chaining">Chaining</a></li>
-                <a href="#functions-data-join">Return of the Functions, and a New Data Join</a></li>
+                <li><a href="#functions-data-join">Return of the Functions, and a New Data Join</a></li>
                 <li><a href="#scaling">Scaling to Fit</a></li>
             </ul>
         </li>
@@ -47,7 +47,7 @@ The goal is to turn it into something like this:
         color: white;
     }
 </style>
-<script async>
+<script>
     var data = [4, 8, 15, 16, 23, 42];
 
     var x = d3.scale.linear()
@@ -307,7 +307,7 @@ var div = d3.select(".chart-stupid-d3");
 ```
 
 <div class="chart chart-stupid-d3"></div>
-<script async>
+<script>
     var div = d3.select(".chart-stupid-d3");
         var div1 = div.append("div");
             div1.style("width", "40px");
@@ -364,7 +364,7 @@ var div = d3.select(".chart-stupid-chained");
 ```
 
 <div class="chart chart-stupid-chained"></div>
-<script async>
+<script>
     var div = d3.select(".chart-stupid-chained");
         div.append("div")
             .style("width", "40px")
@@ -396,7 +396,7 @@ d3.select(".chart-one-bar")
 ```
 
 <div class="chart chart-one-bar"></div>
-<script async>
+<script>
     d3.select(".chart-one-bar")
         .append("div")
             .style("width", "40px")
@@ -467,7 +467,7 @@ var div = d3.select(".chart-times-ten");
 ```
 
 <div class="chart chart-times-ten"></div>
-<script async>
+<script>
     var val = 0;
     var div = d3.select(".chart-times-ten");
         val = 4;
@@ -522,7 +522,7 @@ d3.select(".chart-programmatic")
 ```
 
 <div class="chart chart-programmatic"></div>
-<script async>
+<script>
     var data = [4, 8, 15, 16, 23, 42];
 
     d3.select(".chart-programmatic")
@@ -559,7 +559,7 @@ d3.select(".chart-scaled")
 ```
 
 <div class="chart chart-scaled"></div>
-<script async>
+<script>
     var data = [4, 8, 15, 16, 23, 42];
 
     var x = d3.scale.linear()
