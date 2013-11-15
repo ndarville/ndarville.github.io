@@ -545,21 +545,21 @@ d3.select(".chart-programmatic")
 
 <h4 id="scaling">Scaling to Fit</h4>
 
-At this point, there is only really one thing that stands out in our code and calls for a fix. Can you spot it? It's this line:
+At this point, only one thing stands out in our code and calls for a fix. Can you spot it?
 
 ```js
 .style("width", function(d) { return d*10 + "px"; })
 ```
 
-Do you see it? ENHANCE:
+Don't see it? ENHANCE:
 
 ```js
-{ return d*10 + "px"; }
+return d*10 + "px";
 ```
 
-It's the **magic number** `10`. We used it, because we wanted out bars to be a little longer for aesthetic reasons, but we chose the number quite arbitrarily.
+It's the **magic number** `10`. We used it, because we wanted our bars to be a little longer for aesthetic reasons, but we chose the number quite arbitrarily.
 
-For instance, what if we had a value of 1,000 in our dataset? It would completely break our chart, leaving us to hand-pick *another* magic number that still wouldn't work with all the numbers we tossed into our dataset.
+For instance, what if we added a value of 1,000 in our dataset? It would completely break our chart, leaving us to hand-pick *another* magic number that still wouldn't work with any future numbers we toss into our dataset.
 
 <div class="box info">
     <strong>Magic numbers</strong> are hand-picked values bound to only work for some use cases.
@@ -577,7 +577,7 @@ For instance, what if we had a value of 1,000 in our dataset? It would completel
 
 Be particularly careful with using magic numbers with D3, because you'll soon have a cornucopia of them in your code, before you know it.
 
-Instead of scaling our bar widths with `d*10`, we rely on D3's method `scale.linear()`. The method takes the domain of our input (`data`) and the range of our output (width). Put together, we get this:
+Instead of scaling our bar widths with `d*10`, we'll rely on D3's method `scale.linear()`. The method takes the domain of our input (`data`) and the range of our output (width). Put together, we get this:
 
 ```js
 var x = d3.scale.linear()
@@ -592,7 +592,7 @@ The maximum width a bar in our chart can or should have is the width of the cont
 This being a bar chart, it's probably better we define the minimum for our input and domain to be zero, so we don't cut off our bars and misrepresent the values behind them.
 
 <div class="box quote">
-    Although <code>x</code> here looks like an object, it is also a function that returns the scaled display value in the range for a given data value in the domain. For example, an input value of <code>4</code> returns <code>40</code>, and an input value of <code>16</code> returns <code>160</code>.
+    "Although <code>x</code> here looks like an object, it is also a function that returns the scaled display value in the range for a given data value in the domain. For example, an input value of <code>4</code> returns <code>40</code>, and an input value of <code>16</code> returns <code>160</code>."
 </div>
 
 In our code, we can now replace our magic-number `10` with our scale function `x`:
