@@ -568,7 +568,7 @@ For instance, what if we had a value of 1,000 in our dataset? It would completel
 </div>
 
 <div class="box info">
-    Magic numbers aren't defined variables with intelligible names, which is why it was probably hard for you to remember what the hell that number did in our code!</p>
+    Magic numbers aren't defined variables with intelligible names, which is why it was probably hard for you to remember what the hell that number did in our code!
 
     <p>If you do use a magic number, save it as a variable with a name explaining its purpose.</p>
 
