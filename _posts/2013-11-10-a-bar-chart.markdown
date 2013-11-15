@@ -84,14 +84,17 @@ By the end of this tutorial, you will also be familiar with the important concep
 1. Selections
 2. Chaining
 3. Data joins
+4. Magic numbers
 
-and the D3 methods
+and the `d3` methods
 
 * `append()`
 * `select()`
 * `selectAll()`
 * `.data()`
 * `.enter()`
+* `.scale.linear()`
+* `.d3.max()`
 
 To make things even easier, [here][template] is a naked template file you can start out with. You can right-click to save it or copy it from here:
 
@@ -148,10 +151,12 @@ Translated:
 
 The main difference between the two examples is that you have to write *where* your `<div>` goes in JavaScript (inside `<body>`). As you aren't putting your HTML directly where you want it to be with JavaScript, you have to spell it out explicitly. You have to *select* the `<body>` element yourself.
 
+--->
+
 In JavaScript terminology, we call this concept **selection**.
 
 <div class="info box">
-    all charThe concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
+    The concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
 
     <p>Keep reading along, though; you can always go back to brush up.</p>
 </div>
@@ -540,7 +545,57 @@ d3.select(".chart-programmatic")
 
 <h4 id="scaling">Scaling to Fit</h4>
 
---->
+At this point, there is only really one thing that stands out in our code and calls for a fix. Can you spot it? It's this line:
+
+```js
+.style("width", function(d) { return d*10 + "px"; })
+```
+
+Do you see it? ENHANCE:
+
+```js
+{ return d*10 + "px"; }
+```
+
+It's the **magic number** `10`. We used it, because we wanted out bars to be a little longer for aesthetic reasons, but we chose the number quite arbitrarily.
+
+For instance, what if we had a value of 1,000 in our dataset? It would completely break our chart, leaving us to hand-pick *another* magic number that still wouldn't work with all the numbers we tossed into our dataset.
+
+<div class="box info">
+    <strong>Magic numbers</strong> are hand-picked values bound to only work for some use cases.
+
+    <p>It is rarely preferable to go with a magic number over a generalized solution that works across different situations.</p>
+</div>
+
+<div class="box info">
+    Magic numbers aren't defined variables with intelligible names, which is why it was probably hard for you to remember what the hell that number did in our code!</p>
+
+    <p>If you do use a magic number, save it as a variable with a name explaining its purpose.</p>
+
+    <p>When we talk about "magic" in other areas of programming, it is not necessarily meant as a compliment; it is a comment on the difficulty of understanding what actually is happening before us.</p>
+</div>
+
+Be particularly careful with using magic numbers with D3, because you'll soon have a cornucopia of them in your code, before you know it.
+
+Instead of scaling our bar widths with `d*10`, we rely on D3's method `scale.linear()`. The method takes the domain of our input (`data`) and the range of our output (width). Put together, we get this:
+
+```js
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
+```
+
+To find the highest value in our dataset, we use the method `d3.max()`. In our case, the value happens to be `42`.
+
+The maximum width a bar in our chart can or should have is the width of the container for our entire web page, so the bar doesn't extend beyond what people can see. We decide the longest bar in our chart should be `420` pixels.
+
+This being a bar chart, it's probably better we define the minimum for our input and domain to be zero, so we don't cut off our bars and misrepresent the values behind them.
+
+<div class="box quote">
+    Although <code>x</code> here looks like an object, it is also a function that returns the scaled display value in the range for a given data value in the domain. For example, an input value of <code>4</code> returns <code>40</code>, and an input value of <code>16</code> returns <code>160</code>.
+</div>
+
+In our code, we can now replace our magic-number `10` with our scale function `x`:
 
 ```js
 var data = [4, 8, 15, 16, 23, 42];
@@ -573,7 +628,7 @@ d3.select(".chart-scaled")
             .text(function(d) { return d; });
 </script>
 
---->
+And *that* concludes this tutorial. Check out the list of further reading below for more.
 
 <h3 id="further-reading">Further Reading</h3>
 
