@@ -241,7 +241,7 @@ Which gives us this:
 
 This isn't a screenshot, but actual HTML; check it out.
 
-The CSS will be the same for all the following examples, so just use the same for those.
+The CSS will be the same for all the following examples, so just use the same for those. We multiplied the values with `10` for our widths, as we ought to have a bar chart bigger than `42` pixels.
 
 If you wonder where we got the values from, we got them from our `data`:
 
@@ -249,7 +249,7 @@ If you wonder where we got the values from, we got them from our `data`:
 var data = [4, 8, 15, 16, 23, 42];
 ```
 
-Evidently, this approach *sucks*.
+Evidently, this approach *sucks*---for several reasons.
 
 <div class="info box">
     The tedium of doing the chart by hand teaches us a valuable lesson in programming: <strong>Don't Repeat Yourself</strong> (DRY).
