@@ -91,10 +91,10 @@ and the `d3` methods
 * `append()`
 * `select()`
 * `selectAll()`
-* `.data()`
-* `.enter()`
-* `.scale.linear()`
-* `.d3.max()`
+* `data()`
+* `enter()`
+* `scale.linear()`
+* `max()`
 
 To make things even easier, [here][template] is a naked template file you can start out with. You can right-click to save it or copy it from here:
 
@@ -153,7 +153,7 @@ The main difference between the two examples is that you have to write *where* y
 
 In JavaScript terminology, the concept we rely on for this is **selection**. Remember how you use selectors in CSS to apply stylesheet rules? In this case, we operate on our defined selections to achieve a wide variety of goals.
 
-This is what ~~~[the official docs][selectors]~~ say on the subject:
+This is what ~~~[the official docs][selectors]~~~ say on the subject:
 
 <div class="quote box">
     "Selectors, which are widely used in CSS, are patterns that match against elements in a tree structure. The Selectors API specification defines methods for retrieving <code>Element</code> nodes from the DOM by matching against a group of selectors. It is often desirable to perform DOM operations on a specific set of elements in a document. These methods simplify the process of acquiring specific elements, especially compared with the more verbose techniques defined and used in the past."
