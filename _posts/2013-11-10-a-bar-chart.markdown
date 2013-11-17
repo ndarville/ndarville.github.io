@@ -151,9 +151,13 @@ Translated:
 
 The main difference between the two examples is that you have to write *where* your `<div>` goes in JavaScript (inside `<body>`). As you aren't putting your HTML directly where you want it to be with JavaScript, you have to spell it out explicitly. You have to *select* the `<body>` element yourself.
 
---->
+In JavaScript terminology, the concept we rely on for this is **selection**. Remember how you use selectors in CSS to apply stylesheet rules? In this case, we operate on our defined selections to achieve a wide variety of goals.
 
-In JavaScript terminology, we call this concept **selection**.
+This is what ~~~[the official docs][selectors]~~ say on the subject:
+
+<div class="quote box">
+    "Selectors, which are widely used in CSS, are patterns that match against elements in a tree structure. The Selectors API specification defines methods for retrieving <code>Element</code> nodes from the DOM by matching against a group of selectors. It is often desirable to perform DOM operations on a specific set of elements in a document. These methods simplify the process of acquiring specific elements, especially compared with the more verbose techniques defined and used in the past."
+</div>
 
 <div class="info box">
     The concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
@@ -172,7 +176,7 @@ div.html("Hello World");
 Creating a selection couldn't be easier than `d3.select("body")`. Compare that with the abstruse JavaScript example, and you'll begin to see the advantage of D3.
 
 <div class="quote box">
-    "A selection can be created in myriad ways. Most often you create one by querying a <em><a href="http://www.w3.org/TR/selectors-api/">selectors</a></em>, which is a special string that identifies desired elements by property, say by name or class (<code>"div"</code> or <code>".foo"</code>, respectively)."
+    <strong>Mike Bostock</strong>: "A selection can be created in myriad ways. Most often you create one by querying a <em><a href="http://www.w3.org/TR/selectors-api/">selectors</a></em>, which is a special string that identifies desired elements by property, say by name or class (<code>"div"</code> or <code>".foo"</code>, respectively)."
 </div>
 
 The method name `append()` might confuse you at first, but remember that we are operating on a *tree-like structure* of HTML, which is the DOM. If you recall, the corresponding method in JavaScript was named `appendChild()`.
@@ -410,7 +414,7 @@ d3.select(".chart-one-bar")
 Sifu Bostock explains:
 
 <div class="quote box">
-    "There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements."
+    <strong>Mike Bostock:</strong> "There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements."
 </div>
 
 Hence why we needed our `div` variable, when we appended several bars, as omitting `div` would nest our bars inside each other instead of inside our chart container, `div`.
@@ -636,6 +640,7 @@ You can read the next chapters of Mike Bostock's bar-chart tutorials starting fr
 
 * <i>[How Selections Work][selections-howto]</i> by Mike Bostock
 * [API Reference for D3 Selections][selections-api]
+* [Official Docs for Selectors][selectors]
 * <i>[Understanding selectAll, data, enter, append sequence in D3.js][understanding]</i>
 * <i>[Nested Selections][nested]</i> by Mike Bostock
 

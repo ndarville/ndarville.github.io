@@ -32,8 +32,8 @@ a, a:visited { color: #00A; }
     content: "Note: ";
     font-weight: bold;
 }
-.quote:before {
-    content: "Mike Bostock: ";
+
+.quote strong:first-child {
     font-weight: bold;
     font-variant: small-caps;
     font-family: Georgia;
