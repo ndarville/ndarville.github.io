@@ -12,10 +12,25 @@ body {
 
 a, a:visited { color: #00A; }
 
+h3, h4, h5 {
+    margin-top: 1em; margin-bottom: 0.5em;
+    border-top: 1px solid #777;
+    padding-top: 1em;
+}
+
+h4 {
+    font-style: italic; font-family: Verdana;
+}
+
 #toc,
-.box {
+.box,
+.highlight {
     width: 85%;
     margin: 1em auto;
+}
+
+#toc,
+.box {
     padding: 1em;
     font: 0.8em/1.6em Verdana;
 }
@@ -39,20 +54,11 @@ a, a:visited { color: #00A; }
     font-family: Georgia;
 }
 
-h3, h4, h5 {
-    margin-top: 1em; margin-bottom: 0.5em;
-    border-top: 1px solid #777;
-    padding-top: 1em;
-}
-
-h4 {
-    font-style: italic; font-family: Verdana;
-}
-
-pre,
 .highlight {
-    margin-left: 2em;
-    margin-right: 2em;
+    overflow: auto;
+}
+
+.chart {
     overflow: auto;
 }
 
