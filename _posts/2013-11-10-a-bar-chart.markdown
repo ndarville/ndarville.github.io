@@ -413,9 +413,27 @@ Sifu Bostock explains:
     <strong>Mike Bostock:</strong> "There is a gotcha with method chaining, however: while most operations return the same selection, some methods return a new one! For example, <a href="https://github.com/mbostock/d3/wiki/Selections#wiki-append">selection.append</a> returns a new selection containing the new elements. This conveniently allows you to chain operations into the new elements."
 </div>
 
-Hence why we needed our `div` variable, when we appended several bars, as omitting `div` would nest our bars inside each other instead of inside our chart container, `div`.
+This is why we need our `div` variable, when we append several bars; omitting it would nest our bars *inside each other* instead of *inside our chart container*.
 
---->
+You could say we take a step *back* up our HTML or DOM tree to work inside the `<div>` container insteader of inside our `<div>` bar.
+
+I know it can be a little confusing, when both our chart container and bars are `<div>` elements, so let me try to represent what it is we want to achieve, and what we want to avoid here:
+
+```html
+<!-- Right -->
+    <div class="chart">
+        <div>
+        </div>
+        <!-- Future div bar -->
+    </div>
+
+<!-- Wrong -->
+    <div class="chart">
+        <div>
+            <!-- Future div bar -->
+        </div>
+    </div>
+```
 
 <h4 id="functions-data-join">Return of the Functions, and a New Data Join</h4>
 
