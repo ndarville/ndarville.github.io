@@ -575,9 +575,7 @@ Don't see it? ENHANCE:
 return d*10 + "px";
 ```
 
-It's the **magic number** `10`. We used it, because we wanted our bars to be a little longer for aesthetic reasons, but we chose the number quite arbitrarily.
-
-For instance, what if we added a value of 1,000 in our dataset? It would completely break our chart, leaving us to hand-pick *another* magic number that still wouldn't work with any future numbers we toss into our dataset.
+It's the **magic number** `10`. We used it, because we wanted our bars to be a little longer for aesthetic reasons, but we chose the number `10` quite arbitrarily.
 
 <div class="box info">
     <strong>Magic numbers</strong> are hand-picked values bound to only work for some use cases.
@@ -585,17 +583,19 @@ For instance, what if we added a value of 1,000 in our dataset? It would complet
     <p>It is rarely preferable to go with a magic number over a generalized solution that works across different situations.</p>
 </div>
 
+If you still don't see a problem with our magic number, imagine adding the value `1,000` to our dataset. It would *completely* break our chart with a new bar 10,000 pixels wide. Choosing a new magic number would still be an imperfect and short-sighted solution.
+
 <div class="box info">
     Magic numbers aren't defined variables with intelligible names, which is why it was probably hard for you to remember what the hell that number did in our code!
 
     <p>If you do use a magic number, save it as a variable with a name explaining its purpose.</p>
 
-    <p>When we talk about "magic" in other areas of programming, it is not necessarily meant as a compliment; it is a comment on the difficulty of understanding what actually is happening before us.</p>
+    <p>When we talk about "magic" in other areas of programming, it is not meant as a compliment, but a comment on the difficulty of understanding what actually is happening before us.</p>
 </div>
 
 Be particularly careful with using magic numbers with D3, because you'll soon have a cornucopia of them in your code, before you know it.
 
-Instead of scaling our bar widths with `d*10`, we'll rely on D3's method `scale.linear()`. The method takes the domain of our input (`data`) and the range of our output (width). Put together, we get this:
+Instead of scaling our bar widths with `d*10`, we'll use D3's method `scale.linear()`. It takes the domain of our input (`data`) and the range of our output (width). Put together, we get this:
 
 ```js
 var x = d3.scale.linear()
@@ -603,14 +603,14 @@ var x = d3.scale.linear()
     .range([0, 420]);
 ```
 
-To find the highest value in our dataset, we use the method `d3.max()`. In our case, the value happens to be `42`.
+To find the highest value in our dataset, we use the method `d3.max()`. In our case, the maximum value is `42`.
 
-The maximum width a bar in our chart can or should have is the width of the container for our entire web page, so the bar doesn't extend beyond what people can see. We decide the longest bar in our chart should be `420` pixels.
+The maximum width a bar in our chart should have is the width our web page---so the bar doesn't extend beyond what people can see. We decide the longest bar in our chart should be `420` pixels.
 
-This being a bar chart, it's probably better we define the minimum for our input and domain to be zero, so we don't cut off our bars and misrepresent the values behind them.
+This being a bar chart, it's probably better we define the minimum for our input and domain to be `0` to avoid cutting off our bars and misrepresent the values behind them.
 
 <div class="box quote">
-    "Although <code>x</code> here looks like an object, it is also a function that returns the scaled display value in the range for a given data value in the domain. For example, an input value of <code>4</code> returns <code>40</code>, and an input value of <code>16</code> returns <code>160</code>."
+    <strong>Mike Bostock:</strong> "Although <code>x</code> here looks like an object, it is also a function that returns the scaled display value in the range for a given data value in the domain. For example, an input value of <code>4</code> returns <code>40</code>, and an input value of <code>16</code> returns <code>160</code>."
 </div>
 
 In our code, we can now replace our magic-number `10` with our scale function `x`:
