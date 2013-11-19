@@ -199,7 +199,7 @@ While you chew on this, let's proceed to make a chart---*the stupid way*.
 
 If you had to rely solely on HTML and CSS, and you didn't have *too* many numbers in your dataset, you could write the code by hand, tedious as it would be.
 
-The simplest way would be to just create one `<div>` container and nest a `<div>` block inside for each horizontal bar in the chart. So let's do it:
+The simplest way would be to just create one `<div>` container and nest a `<div>` block inside for each bar in the chart:
 
 ```html
 <style>
@@ -241,9 +241,11 @@ If you wonder where we got the values from, we got them from our `data`:
 var data = [4, 8, 15, 16, 23, 42];
 ```
 
-The CSS will be the same for all the following examples, so just use the same for those. We multiplied the values with `10` for our widths, as we ought to have a bar chart bigger than `42` pixels.
+The CSS will be the same for all the following examples, so just use the same for those, if you are coding this, as you read along.
 
-Evidently, this approach *sucks*---for several reasons.
+In defining our widths, we multiplied the values with `10`, as we ought to have a bar chart bigger than `42` pixels.
+
+Evidently, this approach *sucks*.
 
 <div class="info box">
     The tedium of doing the chart by hand teaches us a valuable lesson in programming: <strong>Don't Repeat Yourself</strong> (DRY).
@@ -255,7 +257,7 @@ Evidently, this approach *sucks*---for several reasons.
 
 <h3 id="programmatically">Coding a Chart Programmatically, the Clever Way</h3>
 
-Remember how you learnt to make a container with HTML, JavaScript, and D3, and touched on the concept of selections?
+By now, you've learnt to make a container with HTML, JavaScript, and D3, and touched on the concept of selections in order to create the chart bars inside said container.
 
 This was how we created one `<div>` inside a `<body>` with D3:
 
@@ -284,7 +286,7 @@ Great approaches both, but the HTML approach revealed its weakness, when we had 
 </div>
 ```
 
-As a Dane writing in English, let me assure you that you can speak stupid in any language; a similar piecemeal approach with D3 looks like *this*:
+As a Dane writing in English, let me assure you that it's possible to speak stupid in any language; a stupid piecemeal approach with D3 similar to the prior examples would look like *this*:
 
 ```js
 var div = d3.select(".chart-stupid-d3");
