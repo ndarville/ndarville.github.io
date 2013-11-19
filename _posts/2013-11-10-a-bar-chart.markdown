@@ -35,7 +35,7 @@ Say you have some data you want to make into a bar chart with D3. We represent t
 var data = [4, 8, 15, 16, 23, 42];
 ```
 
-The goal is to turn it into something like this:
+The goal is to turn it into this:
 
 <div class="chart chart-aperitif"></div>
 <style>
@@ -67,19 +67,13 @@ The goal is to turn it into something like this:
     <em>All</em> charts in this tutorial are rendered code. This tutorial contains <em>no</em> images.
 </div>
 
-This tutorial spans over three parts that entail creating
-
-1. A bare-bones version in **HTML**.
-2. Then a more complete chart in **SVG**.
-3. And lastly, animated **transitions** between views.
-
 This tutorial assumes a basic understanding of web development, which includes
 
 1. Editing a web page (HTML/CSS).
 2. Viewing the page in your web browser.
 3. Including `d3.js` on your web page and writing passable JavaScript.
 
-By the end of this tutorial, you will also be familiar with the important concepts of
+By the end of this tutorial, you will also be familiar with the concepts of
 
 1. Selections
 2. Chaining
@@ -96,7 +90,7 @@ and the `d3` methods
 * `scale.linear()`
 * `max()`
 
-To make things even easier, [here][template] is a naked template file you can start out with. You can right-click to save it or copy it from here:
+To make things easier, [here][template] is a naked template file you can start out with. Right-click the link to save it, or copy from here:
 
 ```html
 <!DOCTYPE html>
@@ -125,7 +119,7 @@ To make things even easier, [here][template] is a naked template file you can st
 
 <h3 id="container">A Container for Our Chart</h3>
 
-You'll want to get your hands dirty at this point and create something. It's a good idea to create a **container** for your chart HTML. We'll use a `<div>` element that lives inside `<body>` for this.
+You'll want to get your hands dirty at this point. It's a good idea to create a **container** for your chart HTML. We'll use a `<div>` element that lives inside `<body>` for this.
 
 In **HTML**, we construct the `<div>` container like so:
 
@@ -151,18 +145,18 @@ Translated:
 
 The main difference between the two examples is that you have to write *where* your `<div>` goes in JavaScript (inside `<body>`). As you aren't putting your HTML directly where you want it to be with JavaScript, you have to spell it out explicitly. You have to *select* the `<body>` element yourself.
 
-In JavaScript terminology, the concept we rely on for this is **selection**. Remember how you use selectors in CSS to apply stylesheet rules? In this case, we operate on our defined selections to achieve a wide variety of goals.
+This touches on the concept of **selections**. Remember how you use *selectors* in CSS to apply stylesheet rules?
 
-This is what ~~~[the official docs][selectors]~~~ say on the subject:
+```css
+body {
+    background-color: white;
+}
+```
+
+This is what [the official language][selectors] on selectors says:
 
 <div class="quote box">
     "Selectors, which are widely used in CSS, are patterns that match against elements in a tree structure. The Selectors API specification defines methods for retrieving <code>Element</code> nodes from the DOM by matching against a group of selectors. It is often desirable to perform DOM operations on a specific set of elements in a document. These methods simplify the process of acquiring specific elements, especially compared with the more verbose techniques defined and used in the past."
-</div>
-
-<div class="info box">
-    The concept of selections is <em>very</em> important for you to understand---and yes, it can be a little tricky to wrap your head around the first few times.
-
-    <p>Keep reading along, though; you can always go back to brush up.</p>
 </div>
 
 With this in mind, look at how we perform the same task as above with **D3**:
@@ -176,7 +170,7 @@ div.html("Hello World");
 Creating a selection couldn't be easier than `d3.select("body")`. Compare that with the abstruse JavaScript example, and you'll begin to see the advantage of D3.
 
 <div class="quote box">
-    <strong>Mike Bostock</strong>: "A selection can be created in myriad ways. Most often you create one by querying a <em><a href="http://www.w3.org/TR/selectors-api/">selectors</a></em>, which is a special string that identifies desired elements by property, say by name or class (<code>"div"</code> or <code>".foo"</code>, respectively)."
+    <strong>Mike Bostock</strong>: "A selection can be created in myriad ways. Most often you create one by querying a <em><a href="http://www.w3.org/TR/selectors-api/">selector</a></em>, which is a special string that identifies desired elements by property, say by name or class (<code>"div"</code> or <code>".foo"</code>, respectively)."
 </div>
 
 The method name `append()` might confuse you at first, but remember that we are operating on a *tree-like structure* of HTML, which is the DOM. If you recall, the corresponding method in JavaScript was named `appendChild()`.
@@ -241,13 +235,13 @@ Which gives us this:
 
 This isn't a screenshot, but actual HTML; check it out.
 
-The CSS will be the same for all the following examples, so just use the same for those. We multiplied the values with `10` for our widths, as we ought to have a bar chart bigger than `42` pixels.
-
 If you wonder where we got the values from, we got them from our `data`:
 
 ```js
 var data = [4, 8, 15, 16, 23, 42];
 ```
+
+The CSS will be the same for all the following examples, so just use the same for those. We multiplied the values with `10` for our widths, as we ought to have a bar chart bigger than `42` pixels.
 
 Evidently, this approach *sucks*---for several reasons.
 
