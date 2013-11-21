@@ -535,7 +535,7 @@ var div = d3.select(".chart");
         .text(d);
 ```
 
-To achieve this (...) **data joins**.
+To achieve this we need to familiarize ourselves with **data joins**.
 
 --->
 
@@ -560,10 +560,6 @@ d3.select(".chart-programmatic")
             .style("width", function(d) { return d*10 + "px"; })
             .text(function(d) { return d; });
 </script>
-
---->
-
-(...) **automating the code**.
 
 --->
 
