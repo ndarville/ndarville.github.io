@@ -27,7 +27,13 @@ categories: blog
 
 <h3 id="intro">Introduction</h3>
 
-<i>(This blog post is an attempt to re-write Mike Bostock's own [bar-chart tutorial][original].)</i>
+<div class="box info">
+    This blog post is an attempt to re-write Mike Bostock's own <a href="http://bost.ocks.org/mike/bar/">bar-chart tutorial</a>.
+
+    <p>The best distillation of my problem with the tutorial is that it feels more more akin to reverse engineering D3 than teaching it.</p>
+
+    <p>The creation of D3 was driven by a set of motivations, and this tutorial aspires to make the reader see the challenges in making a chart, thereby giving the reader an idea of not just <strong>how</strong> D3 works, but also <strong>why</strong> it was made to work that way, and what motivated its creation in the first place.</p>
+</div>
 
 Say you have some data you want to make into a bar chart with D3. We represent the data as an array, in JavaScript:
 
