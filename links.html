@@ -1,0 +1,9 @@
+---
+layout: default
+foo:  "Page"
+---
+{% capture content %}{% include links.md %}{% endcapture %}
+
+<div class="post page">
+    {{ content | markdownify }}
+</div>
