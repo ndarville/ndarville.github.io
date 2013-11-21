@@ -3,6 +3,7 @@
 
 ### Explore D3
 * [Articles and tutorials by Bostock][articles]
+* [Templates for political charts by yours truly][d3-charts]
 * [D3 gallery][gallery]
 * [bl.ocks by Bostock][mbostock]
 
@@ -20,6 +21,7 @@
 
 
 [articles]: http://bost.ocks.org/mike/
+[d3-charts]: https://github.com/ndarville/d3-charts/
 [gallery]: https://github.com/mbostock/d3/wiki/Gallery
 [mbostock]: http://bl.ocks.org/mbostock
 
