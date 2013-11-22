@@ -537,7 +537,9 @@ var div = d3.select(".chart");
 
 To achieve this we need to familiarize ourselves with **data joins**.
 
-For now[^1], I'll defer to Mike Bostock's excellent <i>[Thinking with Joins][joins]</i> to explain data joins and the `selectAll()`, `data()`, and `enter()` methods.
+For now, I'll defer to Mike Bostock's excellent <i>[Thinking with Joins][joins]</i> to explain data joins and the `selectAll()`, `data()`, and `enter()` methods.
+
+(I'll write the part of this tutorial myself later, but this placeholder is better than a useless `TODO: explain data joins` text mid-article.)
 
 Using what the article teaches, we end up with this:
 
@@ -678,8 +680,6 @@ You can read the next chapters of Mike Bostock's bar-chart tutorials starting fr
 * <i>[Understanding selectAll, data, enter, append sequence in D3.js][understanding]</i>
 * <i>[Nested Selections][nested]</i> by Mike Bostock
 
-
-[^1]: I'll write the part of this tutorial myself later, but this placeholder is better than a useless `TODO: explain data joins` text mid-article.
 
 [original]: http://bost.ocks.org/mike/bar/
 [template]: /assets/bar-chart/template.html
