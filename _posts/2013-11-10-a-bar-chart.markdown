@@ -125,7 +125,7 @@ Setting up D3 on your computer can be done by following [the official installati
 </html>
 ```
 
-A much *easier* solution I recommend for neophytes is working from [this][fiddle] fiddle, as you follow the guide. The code in fiddle is for the first D3 example. Remember to press the **Run**, when you are ready to render your code.
+A much *easier* solution I recommend for neophytes is working from [this][fiddle] fiddle, as you follow the guide. The code in the fiddle is for the first D3 example. Remember to press the **Run** button, when you are ready to render your code.
 
 <h3 id="container">A Container for Our Chart</h3>
 
