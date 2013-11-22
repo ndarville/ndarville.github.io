@@ -98,7 +98,7 @@ and the `d3` methods
 * `scale.linear()`
 * `max()`
 
-To make things easier, [here][template] is a naked template file you can start out with. Right-click the link to save it, or copy from here:
+Setting up D3 on your computer can be done by following [the official installation guide][installation]. To make things easier, [here][template] is a naked template file you can start out with. Right-click the link to save it, or copy from here:
 
 ```html
 <!DOCTYPE html>
@@ -124,6 +124,8 @@ To make things easier, [here][template] is a naked template file you can start o
     </body>
 </html>
 ```
+
+A much *easier* solution I recommend for neophytes is working from [this][fiddle]. Remember to press the **Run**, when you are ready to render your code.
 
 <h3 id="container">A Container for Our Chart</h3>
 
@@ -685,6 +687,8 @@ You can read the next chapters of Mike Bostock's bar-chart tutorials starting fr
 
 [original]: http://bost.ocks.org/mike/bar/
 [template]: /assets/bar-chart/template.html
+[installation]: https://github.com/mbostock/d3/wiki#installing
+[fiddle]: http://jsfiddle.net/pessimism/xge5p/
 [selectors]: http://www.w3.org/TR/selectors-api/
 [bar-tut-2]: http://bost.ocks.org/mike/bar/2/
 [joins]: http://bost.ocks.org/mike/join/
