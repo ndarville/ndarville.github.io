@@ -28,7 +28,9 @@ categories: blog
 <h3 id="intro">Introduction</h3>
 
 <div class="box info">
-    This blog post is an attempt to re-write Mike Bostock's own <a href="http://bost.ocks.org/mike/bar/">bar-chart tutorial</a>.
+    This blog post is an attempt to re-write Mike Bostock&rsquo;s own <a href="http://bost.ocks.org/mike/bar/">bar-chart tutorial</a>.
+
+    <p>I myself <a href="http://bl.ocks.org/ndarville/5560275">struggled a lot</a> with learning D3 and creating a chart based on the original tutorial (recently re-written by Bostock himself). I imagine others will, too, so this is my attempt at writing the tutorial I would have wanted over half a year ago.</p>
 
     <p>The best distillation of my problem with the tutorial is that it feels more more akin to reverse engineering D3 than teaching it.</p>
 
