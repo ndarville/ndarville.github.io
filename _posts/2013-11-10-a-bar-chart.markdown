@@ -537,7 +537,9 @@ var div = d3.select(".chart");
 
 To achieve this we need to familiarize ourselves with **data joins**.
 
---->
+For now[^1], I'll defer to Mike Bostock's excellent <i>[Thinking with Joins][joins]</i> to explain data joins and the `selectAll()`, `data()`, and `enter()` methods.
+
+Using what the article teaches, we end up with this:
 
 ```js
 var data = [4, 8, 15, 16, 23, 42];
@@ -561,7 +563,23 @@ d3.select(".chart-programmatic")
             .text(function(d) { return d; });
 </script>
 
---->
+One thing that guide doesn't tell you is the difference between these two pieces of code:
+
+```js
+// (...)
+.style("width", d*10 + "px")
+.text(d);
+```
+
+```js
+// (...)
+.style("width", function(d) { return d*10 + "px"; })
+.text(function(d) { return d; });
+```
+
+The difference shows that in order to access the `d` datum from our data, we now have to retrieve it from a function.
+
+We are almost done generalizing and automating our code to fit our intent, but we before we can call it a day, we need to do address *one* more thing.
 
 <h4 id="scaling">Scaling to Fit</h4>
 
@@ -661,10 +679,13 @@ You can read the next chapters of Mike Bostock's bar-chart tutorials starting fr
 * <i>[Nested Selections][nested]</i> by Mike Bostock
 
 
+[^1]: I'll write the part of this tutorial myself later, but this placeholder is better than a useless `TODO: explain data joins` text mid-article.
+
 [original]: http://bost.ocks.org/mike/bar/
 [template]: /assets/bar-chart/template.html
 [selectors]: http://www.w3.org/TR/selectors-api/
 [bar-tut-2]: http://bost.ocks.org/mike/bar/2/
+[joins]: http://bost.ocks.org/mike/join/
 [selections-howto]: http://bost.ocks.org/mike/selection/
 [selections-api]: https://github.com/mbostock/d3/wiki/Selections
 [understanding]: http://knowledgestockpile.blogspot.com/2012/01/understanding-selectall-data-enter.html
