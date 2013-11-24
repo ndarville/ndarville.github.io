@@ -1,5 +1,6 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
 }
 
 .site {
@@ -11,6 +12,12 @@ body {
 }
 
 a, a:visited { color: #00A; }
+
+.post a {
+    color: #333;
+    background-color: #DEEBF7;
+    text-decoration: none;
+}
 
 h3, h4, h5 {
     margin-top: 1em; margin-bottom: 0.5em;
