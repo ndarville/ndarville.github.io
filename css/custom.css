@@ -47,6 +47,12 @@ h4 {
 #toc { background-color: #F5FAFA; }
 .info { background-color: #CCFFCC; }
 .quote { background-color: beige; }
+
+.emphasis {
+    background-color: #E5F5E0;
+    font: 1em/1.5em Georgia;
+}
+
 .info:before {
     content: "Note: ";
     font-weight: bold;
