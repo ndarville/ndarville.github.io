@@ -15,8 +15,14 @@ a, a:visited { color: #00A; }
 
 .post a {
     color: #333;
-    background-color: #DEEBF7;
+    background-color: #fed9a6;
     text-decoration: none;
+}
+
+#toc a, .box a {
+    color: #333;
+    background: none;
+    text-decoration: underline;
 }
 
 h3, h4, h5 {
