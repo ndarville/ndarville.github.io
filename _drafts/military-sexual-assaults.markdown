@@ -52,6 +52,7 @@ More resources available at Gillibrand's [MJIA homepage][homepage].
 
 [^1]: MJIA goes by **S.967** and **[#passMJIA][hashtag]**.
 
+
 [report]: http://www.sapr.mil/media/pdf/reports/FY12_DoD_SAPRO_Annual_Report_on_Sexual_Assault-VOLUME_ONE.pdf
 
 [profile]: https://twitter.com/SenGillibrand
@@ -63,7 +64,6 @@ More resources available at Gillibrand's [MJIA homepage][homepage].
 [sunlight]: http://congress.sunlightfoundation.com
 [locator]: congress://legislators/local
 [rep-guide]: http://www.congressmerge.com/onlinedb/communicating.htm
-
 
 [infographic]: http://www.mysanantonio.com/twice-betrayed/item/By-the-numbers-19215.php
 [hayes-transcript-1]: http://www.nbcnews.com/id/52107373/ns/msnbc-all_in_with_chris_hayes/
