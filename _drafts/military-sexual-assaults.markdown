@@ -7,7 +7,7 @@ The United States military has a toxic culture; it enables the people who commit
 
 A [report][report] published earlier this year proves it.
 
-The report was published by the Department of Defense's Sexual Assault Prevention and Response Office (SAPRO). The finding that received the most coverage was this figure for the period of fiscal-year 2012 (Oct 1 to Sep 30):
+The report was published by the Department of Defense's Sexual Assault Prevention and Response Office **(SAPRO)**. The finding that received the most coverage was this figure for the period of fiscal-year 2012 (Oct 1 to Sep 30):
 
 <div class="box emphasis">
     <ul>
@@ -20,33 +20,37 @@ And this is just one of many harrowing findings.
 
 Reading the report is not easy and takes a long time, not to mention an emotional toll, but it's comprehensive and chock-full of information; it's a great work. You shouldn't be expected to read the report, so I have created an executive summary in **five charts**.
 
---->
+{% include charts.md %}
 
 ### Do Something, Take Action
 
-Senator [Kirsten Gillibrand][profile] is currently fighting to pass a Senate bill entitled [Military Justice Improvement Act][homepage] (MJIA)[^1], which is currently being denied the opportunity of a Senate vote. After that, the House will need to pass their version of the bill. [This][govtrack] is what the legislative roadmap ahead looks like.
+Senator [Kirsten Gillibrand][profile] (D-NY) is currently fighting to pass a Senate bill entitled the [Military Justice Improvement Act][homepage] **(MJIA)**[^1]. It's currently being denied a vote. Should the bill go forward, which is far from guaranteed, its roadmap would look like [this][govtrack].
 
-Hopefully, you'll realize the urgency of taking action and urging your legislators to pass Sen. Gillibrand's bill---even though it's just the first step.
+Hopefully, you see the urgency of taking action and moving your friends and legislators to support Sen. Gillibrand's bill as-is---even though it's just the first step.
 
-Find your representatives now---not tomorrow, not in a week---and tell them it matters; here are two ways of finding your their name and office contact information:
+**Find your representatives now**---not tomorrow, not in a week---and make them understand that this is something their constitutents want, and that failing to support the bill is not going to go over well with them.
 
-1. By using [this][reps] website.
-2. By getting the [Sunlight Foundation's app][sunlight].
-     * On your iPhone, visit [this][locator] link to go straight to the locator.
+Here are two ways of finding your their name and office contact information:
 
-Please read [Congress Merge's guide][rep-guide] to ensure you contact and communicate with your representatives in the most effective manner.
+1. With [this website][reps].
+2. With [this app][sunlight].
+     * On your iPhone, you can visit [this][locator] link to go straight to the app's locator.
+
+<div class="box info">
+    Please read <a href="http://www.congressmerge.com/onlinedb/communicating.htm">Congress Merge's guide</a> to ensure you contact and communicate with your representatives in the most effective manner.
+</div>
 
 ### Further Reading on Sexual Assault in the Military
 
-* [MJIA on govtrack.us][govtrack]
-* ["The Legacy of Tailhook"][tailhook] on a 20-year-old scandal as relevant as ever, alas.
-* <http://www.protectourdefenders.com/infographic/>
-* "Twice Betrayed" ...
-* <i>Up with Chris Hayes, June 4</i> ([transcript-only][hayes-transcript-1])
-* <i>[All in with Chris Hayes][hayes-vid-2] ([transcript][hayes-transcript-2])</i>
+* [Infographic][infographic] by <i>San Antonio Express</i>
+* <i>Up with Chris Hayes</i>, June 4 ([transcript-only][hayes-transcript-1])
+* <i>[All in with Chris Hayes][hayes-vid-2]</i>, Nov 20 ([transcript][hayes-transcript-2])
+* ["The Legacy of Tailhook"][tailhook] on a 20-year-old scandal that resonates today
+
+More resources available at Gillibrand's [MJIA homepage][homepage].
 
 
-[^1]: Also goes `S.967` and [`#passMJIA`][hashtag].
+[^1]: MJIA goes by **S.967** and **[#passMJIA][hashtag]**.
 
 [report]: http://www.sapr.mil/media/pdf/reports/FY12_DoD_SAPRO_Annual_Report_on_Sexual_Assault-VOLUME_ONE.pdf
 
@@ -60,7 +64,12 @@ Please read [Congress Merge's guide][rep-guide] to ensure you contact and commun
 [locator]: congress://legislators/local
 [rep-guide]: http://www.congressmerge.com/onlinedb/communicating.htm
 
-[tailhook]: http://retroreport.org/the-legacy-of-tailhook/
+
+[infographic]: http://www.mysanantonio.com/twice-betrayed/item/By-the-numbers-19215.php
 [hayes-transcript-1]: http://www.nbcnews.com/id/52107373/ns/msnbc-all_in_with_chris_hayes/
 [hayes-vid-2]: http://www.msnbc.com/all-in/watch/still-no-fix-for-military-sexual-assault-67653699751
 [hayes-transcript-2]: http://www.nbcnews.com/id/53623883/ns/msnbc-all_in_with_chris_hayes/
+[tailhook]: http://retroreport.org/the-legacy-of-tailhook/
+
+[twice-betrayed]: http://www.mysanantonio.com/twice-betrayed/
+[cfap]: http://www.americanprogress.org/issues/military/report/2013/11/06/78909/twice-betrayed/
