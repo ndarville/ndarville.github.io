@@ -4,6 +4,7 @@ title:  "A Bar Chart"
 date:   2013-11-10 17:00:00
 id:     1
 categories: blog
+tags:   tutorials
 ---
 <div id="toc">
     <ol>
