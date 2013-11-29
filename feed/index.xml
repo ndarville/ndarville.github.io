@@ -12,7 +12,7 @@ layout: none
 			<item>
 				<title>{{ post.title }}</title>
 				<description>
-					<p><i>(The charts in this post will not be viewable in a feed reader, loading and executing JavaScript is required.)</i></p>
+					<p><i>(The charts in this post will not be viewable in a feed reader, since loading and executing JavaScript is required.)</i></p>
 
 					<hr />
 
