@@ -10,21 +10,7 @@ There are two great tools for remembering a long list:
 * Association
 * Categorization
 
-If you have to remember the number `4586486448464`, you'll want to break it down into somehow else than a sequence of thirteen arbitrary digits. The same goes for the **thirteen** dwarves (dwarrows) in Tolkien's <i>The Hobbit</i>:
-
-1. Bifur
-2. Bofur
-3. Bombur
-4. Dori
-5. Ori
-6. Nori
-7. Balin
-8. Dwaling
-9. Oin
-10. Glin
-11. Fili
-12. Kili
-13. Thorin
+If you have to remember the number `4586486448464`, you'll want to break it down into somehow else than a sequence of thirteen arbitrary digits. The same goes for the **thirteen** dwarves (dwarrows) in Tolkien's <i>The Hobbit</i>.
 
 I recently saw [this][armitage] clip of Richard Armitage, who plays Thorin, naming all the dwarves in <i>The Hobbit</i>. As someone with a dreadful memory, I was very impressed---and then I noticed a pattern.
 
@@ -54,7 +40,7 @@ Let's divide these names into **families**:
 
 ... and Thorin
 
-Now we have reduced the burden of memorization to **five** families plus one (Thorin).
+Now we have reduced the burden of memorization to **five** families ... plus one.
 
 <div class="box info">
     Remembering thirteen names is hard. Remembering five families plus one is much easier.
