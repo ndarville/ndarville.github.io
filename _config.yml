@@ -5,7 +5,7 @@ repo: https://github.com/ndarville/ndarville.github.io/
 
 markdown: redcarpet
 redcarpet:
-    extensions: ["smart", "footnotes"]
+    extensions: ["smart", "footnotes", "tables"]
 pygments: true
 
 limit_posts: 0
