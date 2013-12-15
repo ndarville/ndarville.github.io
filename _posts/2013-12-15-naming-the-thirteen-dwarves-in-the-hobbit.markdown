@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Remember the 13 Dwarves from &ldquo;The Hobbit&rdquo;"
+title:  "How to Remember the Thirteen Dwarves from &ldquo;The Hobbit&rdquo;"
 date:   2013-12-15 15:29:00
 id:     2
 categories: blog
@@ -95,4 +95,4 @@ As long as you remember the number **6**, this will never happen. You can see wh
 You should be able to name all thirteen dwarves (dwarrows) now. I'm not kidding. Try it.
 
 
-[armitage]: http://howtoraiseageek.tumblr.com/post/69830173492#permalink-notes
+[armitage]: http://howtoraiseageek.tumblr.com/post/69830173492
