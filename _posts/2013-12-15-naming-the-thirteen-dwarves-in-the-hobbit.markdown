@@ -49,12 +49,12 @@ Now we have reduced the burden of memorization to **five** families ... plus one
 But there is another pattern to Armitage's memorization. Can you see it? (It's just like Sesame Street.)
 
 * **3** members
-    1. Dori, Nori, Ori
-    2. Bifur, Bofur, Bombur
+    - Dori, Nori, Ori
+    - Bifur, Bofur, Bombur
 * **2** members
-    1. Dwalin, Balin
-    2. Oin, Gloin
-    3. Fili, Kili
+    - Dwalin, Balin
+    - Oin, Gloin
+    - Fili, Kili
 
 ... and Thorin.
 
