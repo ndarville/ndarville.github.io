@@ -100,6 +100,7 @@ mark {
 
 table {
     font: 0.8em/1.6em Georgia;
+    color: #111;
     border-spacing: 0;
     border-collapse: collapse;
 }
@@ -112,15 +113,11 @@ table {
         background-color: #F5FAFA;
     }
 
-    th, td {
-        color: #333;
-        text-align: center;
-    }
+    th, td { text-align: center; }
 
     th { padding: 0 0.5em; }
 
     td {
-        color: #111;
         padding: 0 0.5em;
         vertical-align: middle;
     }
@@ -146,4 +143,5 @@ sub { bottom: -0.25em; }
 
 @media only screen and (max-device-width: 600px) {
     .highlight { width: 99%; }
+    table { color: #000; }
 }
