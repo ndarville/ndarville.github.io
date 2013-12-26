@@ -108,7 +108,7 @@ table {
         text-align: center;
         margin-left: 0 auto;
         padding: 3px 10px;
-        font: 1.2em/1.15em Georgia small-caps;  /** Revise lineheight */
+        font: 1.2em/1.4em Georgia small-caps;
         caption-side: top;
         background-color: #F5FAFA;
     }
