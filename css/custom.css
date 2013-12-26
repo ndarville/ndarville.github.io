@@ -106,8 +106,8 @@ table {
     caption {
         text-align: center;
         margin-left: 0 auto;
-        padding: 3px;
-        font: 1.2em/1.1em Georgia small-caps;
+        padding: 3px 10px;
+        font: 1.2em/1.15em Georgia small-caps;  /** Revise lineheight */
         caption-side: top;
         background-color: #F5FAFA;
     }
