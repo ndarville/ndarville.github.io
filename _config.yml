@@ -3,7 +3,7 @@ description: "Composing frozen music for the web"
 url: http://ndarville.github.io
 repo: https://github.com/ndarville/ndarville.github.io/
 
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
     extensions: ["smart", "footnotes", "tables"]
 pygments: true
