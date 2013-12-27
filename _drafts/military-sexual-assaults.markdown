@@ -46,6 +46,7 @@ Here are two ways of finding your their name and office contact information:
 * <i>Up with Chris Hayes</i>, June 4 ([transcript-only][hayes-transcript-1])
 * <i>[All in with Chris Hayes][hayes-vid-2]</i>, Nov 20 ([transcript][hayes-transcript-2])
 * ["The Legacy of Tailhook"][tailhook] on a 20-year-old scandal that resonates today
+* [Breaking the silence on male sexual assault][male]
 
 More resources available at Gillibrand's [MJIA homepage][homepage].
 
@@ -73,3 +74,4 @@ More resources available at Gillibrand's [MJIA homepage][homepage].
 
 [twice-betrayed]: http://www.mysanantonio.com/twice-betrayed/
 [cfap]: http://www.americanprogress.org/issues/military/report/2013/11/06/78909/twice-betrayed/
+[male]: http://data.baltimoresun.com/military-sexual-assaults/
