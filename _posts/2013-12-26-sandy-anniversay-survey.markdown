@@ -39,7 +39,7 @@ categories: blog
     "The Monmouth University Polling Institute released the first wave of results from a tracking panel of New Jersey residents who were displaced by Superstorm Sandy for at least one month. Few of these families feel like they are close to full recovery and most feel that the state's rebuilding efforts have overlooked them."
 </div>
 
-The sample size was `683` displaced New Jerseyans; 90% of respondents' counties were Monmouth (51%) and Ocean (39%). More information on methodology and panel demographics is available in the [original report][report].
+The sample size was `683` displaced "New Jersey residents who were displaced by Superstorm Sandy for at least one month"; 90% of respondents' counties were Monmouth (51%) and Ocean (39%). More information on methodology and panel demographics is available in the [original report][report].
 
 If you want to calculate the confidence interval for the percentages, you can do so [here][calculate].
 
@@ -229,8 +229,6 @@ If you want to calculate the confidence interval for the percentages, you can do
 
 <h3 id="helped-forgotten">The Helped and The Forgotten</h3>
 
-As answered by "impacted residents".
-
 <table>
     <caption>
         (Table 5.) Which of the following best describes your feelings about New Jersey's recovery effort? "The recovery effort is focused on helping people like me" OR "people like me have largely been forgotten in the recovery effort"?
@@ -279,7 +277,7 @@ As answered by "impacted residents".
 </table>
 
 <div class="box quote">
-    &ldquo;Among <strong>impacted residents</strong> in the panel survey, the vast majority <mark class="data-forgotten">(75%)</mark><sup>A</sup> say that people like them have largely been forgotten in the recovery effort---including <mark class="data-forgotten-displaced">(85%)</mark><sup>B</sup> of those still displaced and <mark class="data-forgotten-back-home">(64%)</mark><sup>C</sup> of those who have returned to their homes. Only <mark class="data-helped">(25%)</mark><sup>D</sup> of those surveyed feel that the state's recovery effort has focused on helping them.
+    &ldquo;Among impacted residents in the panel survey, the vast majority <mark class="data-forgotten">(75%)</mark><sup>A</sup> say that people like them have largely been forgotten in the recovery effort---including <mark class="data-forgotten-displaced">(85%)</mark><sup>B</sup> of those still displaced and <mark class="data-forgotten-back-home">(64%)</mark><sup>C</sup> of those who have returned to their homes. Only <mark class="data-helped">(25%)</mark><sup>D</sup> of those surveyed feel that the state's recovery effort has focused on helping them.
 
     <p>&lsquo;The Sandy recovery effort is certainly a tale of two states. New Jerseyans who were displaced by the storm, even if they are now back in their homes, are significantly more negative than other Garden State residents about the pace and focus of recovery,&rsquo; said Patrick Murray, director for the Monmouth University Polling Institute, which is conducting the ongoing study under a grant from the New Jersey Recovery Fund.&rdquo;</p>
 </div>
