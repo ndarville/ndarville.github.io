@@ -4,6 +4,7 @@ title:  "How to Remember the Thirteen Dwarves from &ldquo;The Hobbit&rdquo;"
 date:   2013-12-15 15:29:00
 id:     2
 categories: blog
+excerpt: "At the end of this post, you should be able to name all thirteen dwarves from The Hobbit."
 ---
 There are two great tools for remembering a long list:
 

@@ -5,6 +5,7 @@ date:   2013-11-10 17:00:00
 id:     1
 categories: blog
 tags:   tutorials
+excerpt: "An attempt to re-write Mike Bostock's own bar-chart tutorial, serving as an introduction to his charting framework D3."
 ---
 <div id="toc">
     <ol>
