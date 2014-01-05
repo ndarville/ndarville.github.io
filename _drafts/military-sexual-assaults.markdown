@@ -24,7 +24,7 @@ Reading the report is not easy and takes a long time, not to mention an emotiona
 
 ### Do Something, Take Action
 
-Senator [Kirsten Gillibrand][profile] (D-NY) is currently fighting to pass a Senate bill entitled the [Military Justice Improvement Act][homepage] **(MJIA)**[^1]. It's currently being denied a vote. Should the bill go forward, which is far from guaranteed, its roadmap would look like [this][govtrack].
+Senator [Kirsten Gillibrand][profile] (D-NY) is currently fighting to pass a Senate bill entitled the [Military Justice Improvement Act][homepage] **(MJIA)**[^mjia]. It's currently being denied a vote. Should the bill go forward, which is far from guaranteed, its roadmap would look like [this][govtrack].
 
 Hopefully, you see the urgency of taking action and moving your friends and legislators to support Sen. Gillibrand's bill as-is---even though it's just the first step.
 
@@ -51,7 +51,7 @@ Here are two ways of finding your their name and office contact information:
 More resources available at Gillibrand's [MJIA homepage][homepage].
 
 
-[^1]: MJIA goes by **S.967** and **[#passMJIA][hashtag]**.
+[^mjia]: MJIA goes by **S.967** and **[#passMJIA][hashtag]**.
 
 
 [report]: http://www.sapr.mil/media/pdf/reports/FY12_DoD_SAPRO_Annual_Report_on_Sexual_Assault-VOLUME_ONE.pdf
