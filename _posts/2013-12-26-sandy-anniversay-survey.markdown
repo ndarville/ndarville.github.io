@@ -4,7 +4,7 @@ title:  "One Year After Sandy, a Survey"
 date:   2013-12-26 16:00:00
 id:     3
 categories: blog
-excerpt: "An attempt to summarize as accessibly as possible Monmouth University Polling Institute's poll report, Displaced New Jerseyans Negative on Sandy Recovery Efforts—Many still need help making ends meet."
+excerpt: "An attempt to summarize as accessibly as possible Monmouth University Polling Institute's report: Displaced New Jerseyans Negative on Sandy Recovery Efforts—Many still need help making ends meet."
 ---
 <style>
     h4 { border: none; }
