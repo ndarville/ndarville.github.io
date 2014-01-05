@@ -4,6 +4,8 @@ url: http://ndarville.github.io
 repo: https://github.com/ndarville/ndarville.github.io
 
 markdown: kramdown
+kramdown:
+    coderay_line_numbers: ''
 redcarpet:
     extensions: ["smart", "footnotes", "tables"]
 pygments: true
