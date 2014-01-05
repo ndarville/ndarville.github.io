@@ -1,8 +1,8 @@
 name: ndarville
 description: "Composing frozen music for the web"
 url: http://ndarville.github.io
-assets: http://ndarville.github.io/assets/
-repo: https://github.com/ndarville/ndarville.github.io/
+assets: http://ndarville.github.io/assets
+repo: https://github.com/ndarville/ndarville.github.io
 
 markdown: kramdown
 redcarpet:
