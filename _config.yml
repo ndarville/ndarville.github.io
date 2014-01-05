@@ -5,6 +5,7 @@ repo: https://github.com/ndarville/ndarville.github.io
 
 markdown: kramdown
 kramdown:
+    input: GFM
     coderay_line_numbers: ''
 redcarpet:
     extensions: ["smart", "footnotes", "tables"]
