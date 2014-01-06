@@ -62,7 +62,7 @@ But there is another pattern to Armitage's memorization. Can you see it? (It's j
 In case you don't see the pattern, we group families into threes and twos---plus one---based on the amount of members.
 
 <div class="box info">
-    Now you only have to remember a group of threes and twos ... plus one.
+    Now you only have to remember a group of threes and twos &hellip; plus one.
 </div>
 
 You might still get tripped up trying to recall how many families go in each group of threes and twos.

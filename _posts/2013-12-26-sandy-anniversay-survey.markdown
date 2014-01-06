@@ -32,7 +32,7 @@ excerpt: "An attempt to summarize as accessibly as possible Monmouth University 
 </div>
 
 <div class="box quote">
-    "The Monmouth University Polling Institute released the first wave of results from a tracking panel of New Jersey residents who were displaced by Superstorm Sandy for at least one month. Few of these families feel like they are close to full recovery and most feel that the state's rebuilding efforts have overlooked them."
+    &ldquo;The Monmouth University Polling Institute released the first wave of results from a tracking panel of New Jersey residents who were displaced by Superstorm Sandy for at least one month. Few of these families feel like they are close to full recovery and most feel that the state's rebuilding efforts have overlooked them.&rdquo;
 </div>
 
 The sample size was `683` displaced "New Jersey residents who were displaced by Superstorm Sandy for at least one month"; 90% of respondents' counties were Monmouth (51%) and Ocean (39%). More information on methodology and panel demographics is available in the [original report][report].
@@ -141,7 +141,7 @@ If you want to calculate the confidence interval for the percentages, you can do
 
 <h4 id="future-recovery">Future Recovery</h4>
 <div class="box quote">
-    "Among those who participated in the panel survey of the most-impacted residents, <mark class="data-recover-before-anniversary">43%</mark><sup>C</sup> hope to be recovered before Sandy's second anniversay next year, <mark class="data-recover-after-anniversary">31%</mark><sup>D</sup> say it will take longer than that, and <mark class="never-recover">16%</mark><sup>E</sup> say they will never fully recover."
+    &ldquo;Among those who participated in the panel survey of the most-impacted residents, <mark class="data-recover-before-anniversary">43%</mark><sup>C</sup> hope to be recovered before Sandy's second anniversay next year, <mark class="data-recover-after-anniversary">31%</mark><sup>D</sup> say it will take longer than that, and <mark class="never-recover">16%</mark><sup>E</sup> say they will never fully recover.&rdquo;
 </div>
 
 <h3 id="satisfaction">Satisfaction</h3>
