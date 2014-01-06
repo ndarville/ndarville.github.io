@@ -7,24 +7,16 @@ categories: blog
 tags:   tutorials
 excerpt: "An attempt to re-write Mike Bostock's own bar-chart tutorial, serving as an introduction to his charting framework D3."
 ---
-<div id="toc">
-    <ol>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#container">A Container for Our Chart</a>
-            <ul>
-                <li><a href="#selections">Selections</a></li>
-            </ul>
-        </li>
-        <li><a href="#manually">Coding a Chart Manually, the Stupid Way</a></li>
-        <li><a href="#programmatically">Coding a Chart Programmatically, the Clever Way</a>
-            <ul>
-                <li><a href="#chaining">Chaining</a></li>
-                <li><a href="#functions-data-join">Return of the Functions, and a New Data Join</a></li>
-                <li><a href="#scaling">Scaling to Fit</a></li>
-            </ul>
-        </li>
-        <li><a href="#further-reading">Further Reading</a></li>
-    </ol>
+<div id="toc" markdown="1">
+1. [Intro](#intro)
+2. [A Container for Our Chart](#container)
+    * [Selections](#selections)
+3. [Coding a Chart Manually, the Stupid Way](#manually)
+4. [Coding a Chart Programmatically, the Clever Way](#programmatically)
+    * [Chaining](#chaining)
+    * [Return of the Functions, and a New Data Join](#functions-data-join)
+    * [Scaling to Fit](#scaling)
+5. [Further Reading](#further-reading)
 </div>
 
 <h3 id="intro">Introduction</h3>

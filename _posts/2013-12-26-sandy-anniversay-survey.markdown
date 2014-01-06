@@ -14,18 +14,13 @@ excerpt: "An attempt to summarize as accessibly as possible Monmouth University 
     tr td:first-child { text-align: left; }
 </style>
 
-<div id="toc">
-    <ol>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#recovery">Recovery</a>
-            <ul>
-                <li><a href="#current-recovery">Current Recovery</a></li>
-                <li><a href="#future-recovery">Future Recovery</a></li>
-            </ul>
-        </li>
-        <li><a href="#satisfaction">Satisfaction</a></li>
-        <li><a href="#helped-forgotten">The Helped and The Forgotten</a></li>
-    </ol>
+<div id="toc" markdown="1">
+1. [Introduction](#intro)
+2. [Recovery](#recovery)
+    * [Current Recovery](#current-recovery)
+    * [Future Recovery](#future-recovery)
+3. [Satisfaction](#satisfaction)
+4. [The Helped and The Forgotten](#helped-forgotten)
 </div>
 
 <h3 id="intro">Introduction</h3>
