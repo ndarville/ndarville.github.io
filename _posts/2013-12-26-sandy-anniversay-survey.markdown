@@ -31,11 +31,13 @@ excerpt: "An attempt to summarize as accessibly as possible Monmouth University 
     <p><mark>Highlights</mark> and annotations<sup>ABC</sup> have been added by me. The annotations makes it easier to match the percentages with their corresponding data cells.</p>
 </div>
 
+Why does this report deserved an audience? This is why:
+
 <div class="box quote">
-    &ldquo;The Monmouth University Polling Institute released the first wave of results from a tracking panel of New Jersey residents who were displaced by Superstorm Sandy for at least one month. Few of these families feel like they are close to full recovery and most feel that the state's rebuilding efforts have overlooked them.&rdquo;
+    &ldquo;Among impacted residents in the panel survey, the vast majority <mark>(75%)</mark> say that people like them have largely been forgotten in the recovery effort&mdash;including <mark>(85%)</mark> of those still displaced and <mark>(64%)</mark> of those who have returned to their homes. Only <mark>(25%)</mark> of those surveyed feel that the state's recovery effort has focused on helping them.&rdquo;
 </div>
 
-The sample size was `683` displaced "New Jersey residents who were displaced by Superstorm Sandy for at least one month"; 90% of respondents' counties were Monmouth (51%) and Ocean (39%). More information on methodology and panel demographics is available in the [original report][report].
+The sample size was `683` "New Jersey residents who were displaced by Superstorm Sandy for at least one month"; 90% of respondents' counties were Monmouth (51%) and Ocean (39%). More information on methodology and panel demographics is available in the [original report][report].
 
 If you want to calculate the confidence interval for the percentages, you can do so [here][calculate].
 
@@ -134,7 +136,7 @@ If you want to calculate the confidence interval for the percentages, you can do
 
 <h4 id="current-recovery">Current Recovery</h4>
 <div class="box quote">
-    &ldquo;Few of those who were hit hardest by Sandy feel they have returned to their pre-storm living conditions; Only <mark class="data-recovered">10%</mark><sup>A</sup> of those surveyed say they have fully recovered---including just <mark class="data-fully-recovered">18%</mark><sup>B</sup> who are back in their homes and 3% who remain displaced from their pre-Sandy home. [Note: some of those who are still "displaced" have decided to permanently relocate.]
+    &ldquo;Few of those who were hit hardest by Sandy feel they have returned to their pre-storm living conditions; Only <mark class="data-recovered">10%</mark><sup>A</sup> of those surveyed say they have fully recovered&mdash;including just <mark class="data-fully-recovered">18%</mark><sup>B</sup> who are back in their homes and 3% who remain displaced from their pre-Sandy home. [Note: some of those who are still "displaced" have decided to permanently relocate.]
 
     <p>By contrast, a statewide poll conducted by Monmouth University in September found that the vast majority of all New Jersey residents, <mark>76%</mark>, said their families have fully recovered from the storm.&rdquo;</p>
 </div>
