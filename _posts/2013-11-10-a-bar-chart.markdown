@@ -33,9 +33,9 @@ excerpt: "An attempt to re-write Mike Bostock's own bar-chart tutorial, serving 
 
 Say you have some data you want to make into a bar chart with D3. We represent the data as an array, in JavaScript:
 
-```js
+{% highlight js %}
 var data = [4, 8, 15, 16, 23, 42];
-```
+{% endhighlight %}
 
 The goal is to turn it into this:
 
@@ -94,7 +94,7 @@ and the `d3` methods
 
 Setting up D3 on your computer can be done by following [the official installation guide][installation]. To make things easier, [here][template] is a naked template file you can start out with. Right-click the link to save it, or copy from here:
 
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -117,7 +117,7 @@ Setting up D3 on your computer can be done by following [the official installati
         </script>
     </body>
 </html>
-```
+{% endhighlight %}
 
 A much *easier* solution I recommend for neophytes is working from [this][fiddle] fiddle, as you follow the guide. The code in the fiddle is for the first D3 example. Remember to press the **Run** button, when you are ready to render your code.
 
@@ -127,17 +127,17 @@ You'll want to get your hands dirty at this point. It's a good idea to create a 
 
 In **HTML**, we construct the `<div>` container like so:
 
-```html
+{% highlight html %}
 <div>Hello, world!</div>
-```
+{% endhighlight %}
 
 In **JavaScript**:
 
-```js
+{% highlight js %}
 var div = document.createElement("div");
 div.innerHTML = "Hello, world!";
 document.body.appendChild(div);
-```
+{% endhighlight %}
 
 Translated:
 
@@ -151,11 +151,11 @@ The main difference between the two examples is that you have to write *where* y
 
 This touches on the concept of **selections**. Remember how you use *selectors* in CSS to apply stylesheet rules?
 
-```css
+{% highlight css %}
 body {
     background-color: white;
 }
-```
+{% endhighlight %}
 
 This is what [the official language][selectors] on selectors says:
 
@@ -165,11 +165,11 @@ This is what [the official language][selectors] on selectors says:
 
 With this in mind, look at how we perform the same task as above with **D3**:
 
-```js
+{% highlight js %}
 var body = d3.select("body");
 var div = body.append("div");
 div.html("Hello World");
-```
+{% endhighlight %}
 
 Creating a selection couldn't be easier than `d3.select("body")`. Compare that with the abstruse JavaScript example, and you'll begin to see the advantage of D3.
 
@@ -189,13 +189,13 @@ body
 
 `<div>` is a child of `<body>`, which in HTML means the element is nested inside its parent:
 
-```html
+{% highlight html %}
 <body>
     <div>Hello, world!</div>
 </body>
 <!-- Or -->
 <body><div>Hello, world!</div></body>
-```
+{% endhighlight %}
 
 While you chew on this, let's proceed to make a chart---*the stupid way*.
 
@@ -205,7 +205,7 @@ If you had to rely solely on HTML and CSS, and you didn't have *too* many number
 
 The simplest way would be to just create one `<div>` container and nest a `<div>` block inside for each bar in the chart:
 
-```html
+{% highlight html %}
 <style>
     .chart div {
         font: 10px sans-serif;
@@ -224,7 +224,7 @@ The simplest way would be to just create one `<div>` container and nest a `<div>
     <div style="width: 230px;">23</div>
     <div style="width: 420px;">42</div>
 </div>
-```
+{% endhighlight %}
 
 Which gives us this:
 
@@ -241,9 +241,9 @@ This isn't a screenshot, but actual HTML; check it out.
 
 If you wonder where we got the values from, we got them from our `data`:
 
-```js
+{% highlight js %}
 var data = [4, 8, 15, 16, 23, 42];
-```
+{% endhighlight %}
 
 The CSS will be the same for all the following examples, so just use the same for those, if you are coding this, as you read along.
 
@@ -265,21 +265,21 @@ By now, you've learnt to make a container with HTML, JavaScript, and D3, and tou
 
 This was how we created one `<div>` inside a `<body>` with D3:
 
-```js
+{% highlight js %}
 var body = d3.select("body");
 var div = body.append("div");
 div.html("Hello World");
-```
+{% endhighlight %}
 
 ... which was the same as doing this in HTML:
 
-```html
+{% highlight html %}
 <div>Hello, world!</div>
-```
+{% endhighlight %}
 
 Great approaches both, but the HTML approach revealed its weakness, when we had to create several `<div>` bars for our chart:
 
-```html
+{% highlight html %}
 <div class="chart chart-stupid">
     <div style="width: 40px;">4</div>
     <div style="width: 80px;">8</div>
@@ -288,11 +288,11 @@ Great approaches both, but the HTML approach revealed its weakness, when we had 
     <div style="width: 230px;">23</div>
     <div style="width: 420px;">42</div>
 </div>
-```
+{% endhighlight %}
 
 As a Dane writing in English, let me assure you that it's possible to speak stupid in any language; a stupid piecemeal approach with D3 similar to the prior examples would look like *this*:
 
-```js
+{% highlight js %}
 var div = d3.select(".chart-stupid-d3");
     var div1 = div.append("div");
         div1.style("width", "40px");
@@ -312,7 +312,7 @@ var div = d3.select(".chart-stupid-d3");
     var div6 = div.append("div");
         div6.style("width", "420px");
         div6.text(42);
-```
+{% endhighlight %}
 
 <div class="chart chart-stupid-d3"></div>
 <script>
@@ -349,7 +349,7 @@ Fortunately, this is not how D3 is supposed to be used. So let's get to it.
 
 **Chaining** is the first line of attack against stupid code, allowing us to treat the above code example to an extreme make-over:
 
-```js
+{% highlight js %}
 var div = d3.select(".chart-stupid-chained");
     div.append("div")
         .style("width", "40px")
@@ -369,7 +369,7 @@ var div = d3.select(".chart-stupid-chained");
     div.append("div")
         .style("width", "420px")
         .text(42);
-```
+{% endhighlight %}
 
 <div class="chart chart-stupid-chained"></div>
 <script>
@@ -396,12 +396,12 @@ var div = d3.select(".chart-stupid-chained");
 
 If we had only *one* bar, we could chain our methods with no `div` variable like so:
 
-```js
+{% highlight js %}
 d3.select(".chart-one-bar")
     .append("div")
         .style("width", "40px")
         .text(4);
-```
+{% endhighlight %}
 
 <div class="chart chart-one-bar"></div>
 <script>
@@ -423,7 +423,7 @@ You could say we take a step *back* up our HTML or DOM tree to work inside the `
 
 I know it can be a little confusing, when both our chart container and bars are `<div>` elements, so let me try to represent what it is we want to achieve, and what we want to avoid here:
 
-```html
+{% highlight html %}
 <!-- Right -->
     <div class="chart">
         <div>
@@ -437,33 +437,33 @@ I know it can be a little confusing, when both our chart container and bars are 
             <!-- Future div bar -->
         </div>
     </div>
-```
+{% endhighlight %}
 
 <h4 id="functions-data-join">Return of the Functions, and a New Data Join</h4>
 
 When we defined the width of our bars, in both HTML and D3, we took our values, multiplied them by ten, and passed them as our width value. Here is a reminder:
 
-```js
+{% highlight js %}
 // The value is 4
 div.append("div")
     .style("width", "40px")
     .text(4);
-```
+{% endhighlight %}
 
 We did all this by hand, but why do this calculation piecemeal, when there is a smarter way to go about it:
 
-```js
+{% highlight js %}
 var val = 4;
 div.append("div")
     .style("width", val*10 + "px")
     .text(val);
-```
+{% endhighlight %}
 
 This approach means we don't have to pass and calculate our values anymore; we only have to define them. In other words, we are repeating ourselves less by **generalizing** the code.
 
 When we apply this approach to our entire bar chart, we get this:
 
-```js
+{% highlight js %}
 var val = 0;
 var div = d3.select(".chart-times-ten");
     val = 4;
@@ -490,7 +490,7 @@ var div = d3.select(".chart-times-ten");
     div.append("div")
         .style("width", val*10 + "px")
         .text(val);
-```
+{% endhighlight %}
 
 <div class="chart chart-times-ten"></div>
 <script>
@@ -524,14 +524,14 @@ var div = d3.select(".chart-times-ten");
 
 This is *still* repetitive; ideally, we want something like this:
 
-```js
+{% highlight js %}
 var data = [4, 8, 15, 16, 23, 42];
 var div = d3.select(".chart");
     // for d in data
     div.append("div")
         .style("width", d*10 + "px")
         .text(d);
-```
+{% endhighlight %}
 
 To achieve this we need to familiarize ourselves with **data joins**.
 
@@ -541,7 +541,7 @@ For now, I'll defer to Mike Bostock's excellent <i>[Thinking with Joins][joins]<
 
 Using what the article teaches, we end up with this:
 
-```js
+{% highlight js %}
 var data = [4, 8, 15, 16, 23, 42];
 d3.select(".chart-programmatic")
     .selectAll("div")
@@ -549,7 +549,7 @@ d3.select(".chart-programmatic")
     .append("div")
         .style("width", function(d) { return d*10 + "px"; })
         .text(function(d) { return d; });
-```
+{% endhighlight %}
 
 <div class="chart chart-programmatic"></div>
 <script>
@@ -565,17 +565,17 @@ d3.select(".chart-programmatic")
 
 One thing that guide doesn't tell you is the difference between these two pieces of code:
 
-```js
+{% highlight js %}
 // (...)
 .style("width", d*10 + "px")
 .text(d);
-```
+{% endhighlight %}
 
-```js
+{% highlight js %}
 // (...)
 .style("width", function(d) { return d*10 + "px"; })
 .text(function(d) { return d; });
-```
+{% endhighlight %}
 
 The difference shows that in order to access the `d` datum from our data, we now have to retrieve it from a function.
 
@@ -585,15 +585,15 @@ We are almost done generalizing and automating our code to fit our intent, but w
 
 At this point, only one thing stands out in our code and calls for a fix. Can you spot it?
 
-```js
+{% highlight js %}
 .style("width", function(d) { return d*10 + "px"; })
-```
+{% endhighlight %}
 
 Don't see it? ENHANCE:
 
-```js
+{% highlight js %}
 return d*10 + "px";
-```
+{% endhighlight %}
 
 It's the **magic number** `10`. We used it, because we wanted our bars to be a little longer for aesthetic reasons, but we chose the number `10` quite arbitrarily.
 
@@ -617,11 +617,11 @@ Be particularly careful with using magic numbers with D3, because you'll soon ha
 
 Instead of scaling our bar widths with `d*10`, we'll use D3's method `scale.linear()`. It takes the domain of our input (`data`) and the range of our output (width). Put together, we get this:
 
-```js
+{% highlight js %}
 var x = d3.scale.linear()
     .domain([0, d3.max(data)])
     .range([0, 420]);
-```
+{% endhighlight %}
 
 To find the highest value in our dataset, we use the method `d3.max()`. In our case, the maximum value is `42`.
 
@@ -635,7 +635,7 @@ This being a bar chart, it's probably better we define the minimum for our input
 
 In our code, we can now replace our magic-number `10` with our scale function `x`:
 
-```js
+{% highlight js %}
 var data = [4, 8, 15, 16, 23, 42];
 
 var x = d3.scale.linear()
@@ -648,7 +648,7 @@ d3.select(".chart-scaled")
     .append("div")
         .style("width", function(d) { return x(d) + "px"; })
         .text(function(d) { return d; });
-```
+{% endhighlight %}
 
 <div class="chart chart-scaled"></div>
 <script>
