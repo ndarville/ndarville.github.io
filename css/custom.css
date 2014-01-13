@@ -40,7 +40,7 @@ mark {
   width: 85%;
   margin: 1em auto;
   padding: 1em;
-  font: 0.5 Verdana; }
+  font: 0.8em/1.6em Verdana; }
   .box a {
     color: #333333;
     background: none;
@@ -61,7 +61,7 @@ mark {
 
 .emphasis {
   background-color: #e5f5e0;
-  font: 0.66667 Georgia; }
+  font: 1em/1.5em Georgia; }
 
 .info:before {
   content: "Note: ";
@@ -73,7 +73,7 @@ mark {
   font-family: Georgia; }
 
 table {
-  font: 0.5 Georgia;
+  font: 0.8em/1.6em Georgia;
   color: #111111;
   border-spacing: 0;
   border-collapse: collapse; }
@@ -82,7 +82,7 @@ caption {
   text-align: center;
   margin-left: 0 auto;
   padding: 3px 10px;
-  font: 0.85714 Georgia small-caps;
+  font: 1.2em/1.4em Georgia small-caps;
   background-color: #f5fafa;
   caption-side: top; }
 

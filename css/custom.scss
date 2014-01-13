@@ -1,8 +1,12 @@
 $font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$font-size-normal:  1em/1.5em;
-$font-size-larger:  1.2em/1.4em;
-$font-size-smaller: 0.8em/1.6em;
+$font-size-larger:  1.2em;
+$font-size-normal:  1em;
+$font-size-smaller: 0.8em;
+
+$line-height-larger:  1.4em;
+$line-height-normal:  1.5em;
+$line-height-smaller: 1.6em;
 
 $black-colour:       #333;
 $beige-colour:       beige;
@@ -67,7 +71,7 @@ a, a:visited { color: $link-colour; }
         width: $block-width;
         margin: 1em auto;
         padding: 1em;
-        font: $font-size-smaller Verdana;
+        font: #{$font-size-smaller}/#{$line-height-smaller} Verdana;
         a {
             color: $black-colour;
             background: none;
@@ -86,7 +90,7 @@ a, a:visited { color: $link-colour; }
 
         .emphasis {
             background-color: $faded-green-colour;
-            font: $font-size-normal Georgia;
+            font: #{$font-size-normal}/#{$line-height-normal} Georgia;
         }
 
         .info:before {
@@ -102,16 +106,17 @@ a, a:visited { color: $link-colour; }
 // <- Boxes
 // Table ->
     table {
-        font: $font-size-smaller Georgia;
+        font: #{$font-size-smaller}/#{$line-height-smaller} Georgia;
         color: $table-colour;
         border-spacing: 0;
         border-collapse: collapse;
     }
+
         caption {
             text-align: center;
             margin-left: 0 auto;
             padding: 3px 10px;
-            font: $font-size-larger Georgia small-caps;
+            font: #{$font-size-larger}/#{$line-height-larger} Georgia small-caps;
             background-color: $faded-blue-colour;
             caption-side: top;
         }
