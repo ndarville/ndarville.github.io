@@ -14,7 +14,7 @@ excerpt: "An attempt to summarize as accessibly as possible Monmouth University 
     tr td:first-child { text-align: left; }
 </style>
 
-<div id="toc" markdown="1">
+<div id="toc" class="box" markdown="1">
 1. [Introduction](#intro)
 2. [Recovery](#recovery)
     * [Current Recovery](#current-recovery)

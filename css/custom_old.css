@@ -1,0 +1,147 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.site {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+    width: 600px;
+}
+
+a, a:visited { color: #00A; }
+
+.post a {
+    color: #333;
+    background-color: #fed9a6;
+    text-decoration: none;
+}
+
+#toc a, .box a {
+    color: #333;
+    background: none;
+    text-decoration: underline;
+}
+
+h3, h4, h5 {
+    margin-top: 1em; margin-bottom: 0.5em;
+    border-top: 1px solid #777;
+    padding-top: 1em;
+}
+
+.page h3,
+.page h4,
+.page h5 { border-top: none; }
+
+h4 {
+    font-style: italic; font-family: Verdana;
+}
+
+#toc,
+.box,
+.highlight {
+    width: 85%;  /** 0.85*600px = 510px */
+    margin: 1em auto;
+}
+
+#toc,
+.box {
+    padding: 1em;
+    font: 0.8em/1.6em Verdana;
+}
+
+.info,
+.quote {
+    border: 1px solid steelBlue;
+}
+
+#toc { background-color: #F5FAFA; }
+.info { background-color: #CCFFCC; }
+.quote { background-color: beige; }
+
+.emphasis {
+    background-color: #E5F5E0;
+    font: 1em/1.5em Georgia;
+}
+
+.info:before {
+    content: "Note: ";
+    font-weight: bold;
+}
+
+.quote strong:first-child {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: Georgia;
+}
+
+.highlight {
+    overflow: auto;
+}
+
+.chart {
+    overflow: auto;
+}
+
+#history {
+    margin: 1em auto;
+    font-style: italic;
+    text-align: center;
+    border-top: 1px solid #777;
+    padding-top: 1em;
+}
+
+mark {
+    background-color: #FFA;
+    padding: 0 3px;
+}
+
+table {
+    font: 0.8em/1.6em Georgia;
+    color: #111;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+    caption {
+        text-align: center;
+        margin-left: 0 auto;
+        padding: 3px 10px;
+        font: 1.2em/1.4em Georgia small-caps;
+        caption-side: top;
+        background-color: #F5FAFA;
+    }
+
+    th, td { text-align: center; }
+
+    th { padding: 0 0.5em; }
+
+    td {
+        padding: 0 0.5em;
+        vertical-align: middle;
+    }
+
+    tr { vertical-align: middle; }
+
+    td:hover,
+    th:hover { background-color: #CCFFCC; }
+    tr:hover { background-color: #FFA; }
+
+/*
+    * Prevents sub and sup affecting line-height in all browsers
+    * gist.github.com/413930
+*/
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+@media only screen and (max-device-width: 600px) {
+    .highlight { width: 99%; }
+    table { color: #000; }
+}

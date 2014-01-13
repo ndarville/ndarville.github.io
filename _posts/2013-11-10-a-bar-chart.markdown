@@ -7,7 +7,7 @@ categories: blog
 tags:   tutorials
 excerpt: "An attempt to re-write Mike Bostock's own bar-chart tutorial, serving as an introduction to his charting framework D3."
 ---
-<div id="toc" markdown="1">
+<div id="toc" class="box" markdown="1">
 1. [Intro](#intro)
 2. [A Container for Our Chart](#container)
     * [Selections](#selections)

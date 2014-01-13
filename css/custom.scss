@@ -1,0 +1,168 @@
+$font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-size-normal:  1em/1.5em;
+$font-size-larger:  1.2em/1.4em;
+$font-size-smaller: 0.8em/1.6em;
+
+$black-colour:       #333;
+$beige-colour:       beige;
+$faded-blue-colour:  #F5FAFA;
+$faded-green-colour: #E5F5E0;
+$grey-colour:        #777;
+$link-colour:        #00A;
+$link-bg-colour:     #FED9A6;
+$mm-colour:          #CCFFCC;
+$steelblue-colour:   steelBlue;
+$table-colour:       #111;
+$yellow-colour:      #FFA;
+
+$block-width:  85%;  // $block-width
+$cell-padding: 0 0.5em;
+
+
+body {
+    font-family: $font;
+    color: $black-colour;
+}
+
+.site {  // Container
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+    width: 600px;
+}
+
+a, a:visited { color: $link-colour; }
+
+.post a {
+    color: $black-colour;
+    background-color: $link-bg-colour;
+    text-decoration: none;
+}
+
+    h3, h4, h5 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        border-top: 1px solid $grey-colour;
+        padding-top: 1em;
+    }
+
+    h4 {
+        font-family: Verdana;
+        font-style: italic;
+    }
+
+    .page h3,
+    .page h4,
+    .page h5 { border-top: none; }
+
+    mark {
+        background-color: $yellow-colour;
+        padding: 0 3px;
+    }
+
+// Boxes ->
+    .box {
+        width: $block-width;
+        margin: 1em auto;
+        padding: 1em;
+        font: $font-size-smaller Verdana;
+        a {
+            color: $black-colour;
+            background: none;
+            text-decoration: underline;
+        }
+    }
+
+        .info,
+        .quote {
+            border: 1px solid $steelblue-colour;
+        }
+
+        #toc { background-color: $faded-blue-colour; }
+        .info { background-color: $mm-colour; }
+        .quote { background-color: $beige-colour; }
+
+        .emphasis {
+            background-color: $faded-green-colour;
+            font: $font-size-normal Georgia;
+        }
+
+        .info:before {
+            content: "Note: ";
+            font-weight: bold;
+        }
+
+        .quote strong:first-child {
+            font-weight: bold;
+            font-variant: small-caps;
+            font-family: Georgia;
+        }
+// <- Boxes
+// Table ->
+    table {
+        font: $font-size-smaller Georgia;
+        color: $table-colour;
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+        caption {
+            text-align: center;
+            margin-left: 0 auto;
+            padding: 3px 10px;
+            font: $font-size-larger Georgia small-caps;
+            background-color: $faded-blue-colour;
+            caption-side: top;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: $cell-padding;
+        }
+
+        td,
+        th,
+        tr { vertical-align: middle; }
+
+        td:hover,
+        th:hover { background-color: $mm-colour; }
+        tr:hover { background-color: $yellow-colour; }
+// <- Table
+
+.highlight {
+    overflow: auto;
+    width: $block-width;
+    margin: 1em auto;
+}
+
+.chart {
+    overflow: auto;
+}
+
+#history {
+    margin: 1em auto;
+    font-style: italic;
+    text-align: center;
+    border-top: 1px solid $grey-colour;
+    padding-top: 1em;
+}
+
+/*
+    * Prevents sub and sup affecting line-height in all browsers
+    * gist.github.com/413930
+*/
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+    }
+    sup { top: -0.5em; }
+    sub { bottom: -0.25em; }
+
+    @media only screen and (max-device-width: 600px) {
+        .highlight { width: 99%; }
+        table { color: #000; }
+    }

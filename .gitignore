@@ -1,2 +1,4 @@
 _drafts/_ideas/
 _site/
+.bundle/
+.sass-cache/

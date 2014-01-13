@@ -1,132 +1,122 @@
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-}
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333; }
 
 .site {
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1em;
-    width: 600px;
-}
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+  width: 600px; }
 
-a, a:visited { color: #00A; }
+a, a:visited {
+  color: #0000aa; }
 
 .post a {
-    color: #333;
-    background-color: #fed9a6;
-    text-decoration: none;
-}
-
-#toc a, .box a {
-    color: #333;
-    background: none;
-    text-decoration: underline;
-}
+  color: #333333;
+  background-color: #fed9a6;
+  text-decoration: none; }
 
 h3, h4, h5 {
-    margin-top: 1em; margin-bottom: 0.5em;
-    border-top: 1px solid #777;
-    padding-top: 1em;
-}
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  border-top: 1px solid #777777;
+  padding-top: 1em; }
+
+h4 {
+  font-family: Verdana;
+  font-style: italic; }
 
 .page h3,
 .page h4,
-.page h5 { border-top: none; }
+.page h5 {
+  border-top: none; }
 
-h4 {
-    font-style: italic; font-family: Verdana;
-}
+mark {
+  background-color: #ffffaa;
+  padding: 0 3px; }
 
-#toc,
-.box,
-.highlight {
-    width: 85%;  /** 0.85*600px = 510px */
-    margin: 1em auto;
-}
-
-#toc,
 .box {
-    padding: 1em;
-    font: 0.8em/1.6em Verdana;
-}
+  width: 85%;
+  margin: 1em auto;
+  padding: 1em;
+  font: 0.5 Verdana; }
+  .box a {
+    color: #333333;
+    background: none;
+    text-decoration: underline; }
 
 .info,
 .quote {
-    border: 1px solid steelBlue;
-}
+  border: 1px solid steelblue; }
 
-#toc { background-color: #F5FAFA; }
-.info { background-color: #CCFFCC; }
-.quote { background-color: beige; }
+#toc {
+  background-color: #f5fafa; }
+
+.info {
+  background-color: #ccffcc; }
+
+.quote {
+  background-color: beige; }
 
 .emphasis {
-    background-color: #E5F5E0;
-    font: 1em/1.5em Georgia;
-}
+  background-color: #e5f5e0;
+  font: 0.66667 Georgia; }
 
 .info:before {
-    content: "Note: ";
-    font-weight: bold;
-}
+  content: "Note: ";
+  font-weight: bold; }
 
 .quote strong:first-child {
-    font-weight: bold;
-    font-variant: small-caps;
-    font-family: Georgia;
-}
-
-.highlight {
-    overflow: auto;
-}
-
-.chart {
-    overflow: auto;
-}
-
-#history {
-    margin: 1em auto;
-    font-style: italic;
-    text-align: center;
-    border-top: 1px solid #777;
-    padding-top: 1em;
-}
-
-mark {
-    background-color: #FFA;
-    padding: 0 3px;
-}
+  font-weight: bold;
+  font-variant: small-caps;
+  font-family: Georgia; }
 
 table {
-    font: 0.8em/1.6em Georgia;
-    color: #111;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-    caption {
-        text-align: center;
-        margin-left: 0 auto;
-        padding: 3px 10px;
-        font: 1.2em/1.4em Georgia small-caps;
-        caption-side: top;
-        background-color: #F5FAFA;
-    }
+  font: 0.5 Georgia;
+  color: #111111;
+  border-spacing: 0;
+  border-collapse: collapse; }
 
-    th, td { text-align: center; }
+caption {
+  text-align: center;
+  margin-left: 0 auto;
+  padding: 3px 10px;
+  font: 0.85714 Georgia small-caps;
+  background-color: #f5fafa;
+  caption-side: top; }
 
-    th { padding: 0 0.5em; }
+th,
+td {
+  text-align: center;
+  padding: 0 0.5em; }
 
-    td {
-        padding: 0 0.5em;
-        vertical-align: middle;
-    }
+td,
+th,
+tr {
+  vertical-align: middle; }
 
-    tr { vertical-align: middle; }
+td:hover,
+th:hover {
+  background-color: #ccffcc; }
 
-    td:hover,
-    th:hover { background-color: #CCFFCC; }
-    tr:hover { background-color: #FFA; }
+tr:hover {
+  background-color: #ffffaa; }
+
+.highlight {
+  overflow: auto;
+  width: 85%;
+  margin: 1em auto; }
+
+.chart {
+  overflow: auto; }
+
+#history {
+  margin: 1em auto;
+  font-style: italic;
+  text-align: center;
+  border-top: 1px solid #777777;
+  padding-top: 1em; }
 
 /*
     * Prevents sub and sup affecting line-height in all browsers
@@ -134,14 +124,19 @@ table {
 */
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-}
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
 
 @media only screen and (max-device-width: 600px) {
-    .highlight { width: 99%; }
-    table { color: #000; }
-}
+  .highlight {
+    width: 99%; }
+
+  table {
+    color: #000; } }
