@@ -9,11 +9,9 @@ A [report][report] published earlier this year proves it.
 
 The report was published by the Department of Defense's Sexual Assault Prevention and Response Office **(SAPRO)**. The finding that received the most coverage was this figure for the period of fiscal-year 2012 (Oct 1 to Sep 30):
 
-<div class="box emphasis">
-    <ul>
-        <li>Reported sexual assaults: <strong>2,959</strong></li>
-        <li>Estimated sexual assaults: <strong>26,000</strong></li>
-    </ul>
+<div class="box emphasis" markdown="1">
+    * Reported sexual assaults: **2,959**
+    * Estimated sexual assaults: **26,000**
 </div>
 
 And this is just one of many harrowing findings.
