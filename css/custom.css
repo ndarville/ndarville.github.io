@@ -77,31 +77,26 @@ table {
   color: #111111;
   border-spacing: 0;
   border-collapse: collapse; }
-
-caption {
-  text-align: center;
-  margin-left: 0 auto;
-  padding: 3px 10px;
-  font: 1.2em/1.4em Georgia small-caps;
-  background-color: #f5fafa;
-  caption-side: top; }
-
-th,
-td {
-  text-align: center;
-  padding: 0 0.5em; }
-
-td,
-th,
-tr {
-  vertical-align: middle; }
-
-td:hover,
-th:hover {
-  background-color: #ccffcc; }
-
-tr:hover {
-  background-color: #ffffaa; }
+  table caption {
+    text-align: center;
+    margin-left: 0 auto;
+    padding: 3px 10px;
+    font: 1.2em/1.4em Georgia small-caps;
+    background-color: #f5fafa;
+    caption-side: top; }
+  table th,
+  table td {
+    text-align: center;
+    padding: 0 0.5em; }
+  table td,
+  table th,
+  table tr {
+    vertical-align: middle; }
+  table td:hover,
+  table th:hover {
+    background-color: #ccffcc; }
+  table tr:hover {
+    background-color: #ffffaa; }
 
 .highlight {
   overflow: auto;
