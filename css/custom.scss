@@ -50,16 +50,14 @@ a, a:visited { color: $link-colour; }
         margin-bottom: 0.5em;
         border-top: 1px solid $grey-colour;
         padding-top: 1em;
+
+        .page & { border-top: none; }
     }
 
     h4 {
         font-family: Verdana;
         font-style: italic;
     }
-
-    .page h3,
-    .page h4,
-    .page h5 { border-top: none; }
 
     mark {
         background-color: $yellow-colour;

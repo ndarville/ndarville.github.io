@@ -22,15 +22,12 @@ h3, h4, h5 {
   margin-bottom: 0.5em;
   border-top: 1px solid #777777;
   padding-top: 1em; }
+  .page h3, .page h4, .page h5 {
+    border-top: none; }
 
 h4 {
   font-family: Verdana;
   font-style: italic; }
-
-.page h3,
-.page h4,
-.page h5 {
-  border-top: none; }
 
 mark {
   background-color: #ffffaa;
