@@ -1,4 +1,3 @@
-// Config
 var margin = {top: 30, right: 15, bottom: 10, left: 125};
     width = 600 - margin.left - margin.right,
     height = 2000 - margin.top - margin.bottom;
@@ -13,12 +12,10 @@ var y = d3.scale.ordinal()
 var xAxis = d3.svg.axis()
     .scale(x)
     .tickValues([-50,-40,-30,-20,-10,0,10,20,30,40,50])
-
     .tickFormat(function(d) {
         if (d === 0) { return "Even"; }
         else { return d<0 ? "+" + -1*d+"%" : "+" + d+"%"; }
     })
-    // Show values as multiples of 25
     .orient("top");
 
 var yAxis = d3.svg.axis()
@@ -68,6 +65,16 @@ d3.csv("/assets/women-in-tech/data.csv", type, function(error, data) {
         .attr("y2", height);
 
     svg.append("g")
+        .attr({
+            "class": "grid",
+            "transform": "translate(0," + height + ")"
+        })
+        .call(xAxis
+            .tickSize(height, 0, 0)
+            .tickFormat("")
+    );
+
+    svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
         .append("text")
@@ -75,7 +82,7 @@ d3.csv("/assets/women-in-tech/data.csv", type, function(error, data) {
                 "transform": "rotate(-90)",
                 "y": 6,
                 "dy": ".71em"
-          })
+            })
             .style("text-anchor", "end")
             .text("");
 });
@@ -83,6 +90,5 @@ d3.csv("/assets/women-in-tech/data.csv", type, function(error, data) {
 function type(d) {
     d.women = Math.round(parseFloat(d.percent_female_eng));
     d.men = 100-d.women;
-    d.value = 100 - Math.round(parseFloat(d.percent_female_eng));
     return d;
 }
