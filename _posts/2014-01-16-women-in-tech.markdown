@@ -39,4 +39,4 @@ Thanks
 [bostock]: https://github.com/mbostock/
 [inspiration]: http://bl.ocks.org/mbostock/2368837
 [palmer]: https://github.com/Caged/
-[chou]: https://github.com/triketora/
+[chou]: https://twitter.com/triketora
