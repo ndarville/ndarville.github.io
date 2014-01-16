@@ -16,22 +16,22 @@
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="twitter:creator" content="@pessimism">
     {% if page.title %}
-        <meta name="twitter:title" content="{{ page.title }}">
+        <meta property="og:title" content="{{ page.title }}">
     {% else %}
-        <meta name="twitter:title" content="{{ site.name }}">
+        <meta property="og:title" content="{{ site.name }}">
     {% endif %}
     {% if page.excerpt %}
-        <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html }}">
+        <meta property="og:description" content="{{ page.excerpt | markdownify | strip_html }}">
     {% endif %}
     {% if page.url %}
-        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     {% endif %}
     {% if page.image %}
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="{{ site.url }}/assets{{ page.slug }}/image.png">
+        <meta property="og:image" content="{{ site.url }}/assets{{ page.slug }}/image.png">
     {% else %}
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content="{{ site.url }}/identicon.png">
+        <meta property"og:image" content="{{ site.url }}/identicon.png">
     {% endif %}
     </head>
     <body>
