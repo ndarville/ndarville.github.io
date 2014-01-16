@@ -20,8 +20,9 @@ We leave it as an excercise to the reader to figure out whom each side and colou
 <div id="chart"></div>
 
 <script src="/js/d3.min.js?v=3.2.8"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+<script src="/js/d3.tip.min.js"></script>
 <link rel="stylesheet" href="/assets/women-in-tech/style.css">
+<!-- <script src="/assets/women-in-tech/d3+d3-tip+script.js"></script> -->
 <script src="/assets/women-in-tech/script.min.js"></script>
 
 * Gridlines
