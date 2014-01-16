@@ -4,9 +4,17 @@ title:  "Women in Software Engineering by the Numbers"
 categories: blog
 description: "A visualization of the representation of women in software-engineering companies."
 ---
-[Project][project]
+A lot of effort is put into documenting life for women in the tech industry. Tracy Chou is leading a [project][project] that gathers data on the number---and ratio---of female software engineers working at tech companies.
+
+<div class="box quote" markdown="1">
+**Chou:** "For the purposes of this project, I am counting 'female engineers' as women who are writing or architecting software, and are in full-time roles. This generally does not include people just writing HTML/CSS (depending on the level of sophistication of the CSS being written), designers, PMs, sysadmins, etc. although the line can be blurry for people who are in mixed roles, like engineering managers who were formerly ICs and still contribute code---use your judgment. Only full-timers please; no interns or contractors."
+</div>
+
+This is a visualization of the data.
 
 ## Majorities of Men and Women in Software Engineering
+Just in case the chart needs explaining, each bar displays how the men outnumber the women---and vice versa. If a group of software engineers at a company is **90%** male, the bars will display the differential of **40%** from an even **50%**.
+
 We leave it as an excercise to the reader to figure out whom each side and colour represent.
 
 <div id="chart"></div>
@@ -16,7 +24,6 @@ We leave it as an excercise to the reader to figure out whom each side and colou
 <link rel="stylesheet" href="/assets/women-in-tech/style.css">
 <script src="/assets/women-in-tech/script.min.js"></script>
 
-* Display number next to bar
 * Gridlines
 
 Data
