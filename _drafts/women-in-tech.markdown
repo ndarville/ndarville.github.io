@@ -15,6 +15,8 @@ This is a visualization of the data.
 ## Majorities of Men and Women in Software Engineering ##
 Just in case the chart needs explaining, each bar displays how the men outnumber the women---and vice versa. If a group of software engineers at a company is **90%** male, the bars will display the differential of **40%** from an even **50%**.
 
+The chart comes with a tooltip that shows the percentage and number of employees.
+
 We leave it as an excercise to the reader to figure out whom each side and colour represent.
 
 <div id="chart"></div>
