@@ -2,7 +2,9 @@
 layout: post
 title:  "Women in Software Engineering by the Numbers"
 categories: blog
-description: "A visualization of the representation of women in software-engineering companies."
+description: "The male-to-female ratio of software engineers as a data visualization."
+date:   2014-01-16 15:30:00
+id:     4
 ---
 A lot of effort is put into documenting life for women in the tech industry. **Tracy Chou** is leading a [project][project] that gathers data on the number---and ratio---of female software engineers working at tech companies.
 
