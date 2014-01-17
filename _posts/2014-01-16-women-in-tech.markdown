@@ -33,6 +33,7 @@ We leave it as an excercise to the reader to figure out whom each side and colou
 Thanks
 ------
 * [Mike Bostock][bostock], for D3, and [this][inspiration].
+* Kaiser Fung for his [post on the symmetry chart][fung].
 * [Justin Palmer][palmer], for d3-tip.
 * [Tracy Chou][chou] and everyone who contributed to her project.
 
@@ -40,5 +41,6 @@ Thanks
 [project]: https://github.com/triketora/women-in-software-eng
 [bostock]: https://github.com/mbostock/
 [inspiration]: http://bl.ocks.org/mbostock/2368837
+[fung]: http://junkcharts.typepad.com/junk_charts/2012/02/restoring-symmetry-and-another-survey-debunked.html
 [palmer]: https://github.com/Caged/
 [chou]: https://twitter.com/triketora
