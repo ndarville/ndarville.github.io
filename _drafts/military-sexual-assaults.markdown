@@ -5,9 +5,9 @@ categories: blog
 ---
 The United States military has a toxic culture; it enables the people who commit sexual assault, and it punishes the survivors.
 
-A [report][report] published earlier this year proves it.
+A [report][report] published last year proves it.
 
-The report was published by the Department of Defense's Sexual Assault Prevention and Response Office **(SAPRO)**. The finding that received the most coverage was this figure for the period of fiscal-year 2012 (Oct 1 to Sep 30):
+The report was published by the Department of Defense's Sexual Assault Prevention and Response Office **(SAPRO)**. The finding that received the most coverage was this figure for the period of fiscal-year 2012 (Oct 1 2011--Sep 30 2012):
 
 <div class="box emphasis" markdown="1">
 * Reported sexual assaults: **2,959**
