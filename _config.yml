@@ -1,7 +1,6 @@
 name: ndarville
-description: "Composing frozen music for the web"
+description: "Breaking it down"
 url: http://ndarville.github.io
-repo: https://github.com/ndarville/ndarville.github.io
 
 markdown: kramdown
 kramdown:
