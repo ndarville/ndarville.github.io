@@ -10,17 +10,23 @@ slug:   mh370-nationalities
 ---
 <div id="chart"></div>
 
-<!--
-    <link href="/assets/mh370-nationalities/fluoridation/assets/static/css/d3.css" rel="stylesheet" media="screen" />
--->
 <script src="/js/d3.min.js?v=3.2.8"></script>
 <script src="/assets/mh370-nationalities/fluoridation/assets/d3/d3.geo.projection.v0.min.js" charset="utf-8"></script>
 <script src="/assets/mh370-nationalities/fluoridation/assets/d3/topojson.v1.min.js" type="text/javascript" charset="utf-8"></script>
 
-<script src="/assets/mh370-nationalities/fluoridation/assets/d3/settings.js" type="text/javascript" charset="utf-8"></script>
+<!--
+    <script src="/assets/mh370-nationalities/fluoridation/assets/d3/settings.js" type="text/javascript" charset="utf-8"></script>
+-->
 
 <script type="text/javascript" charset="utf-8">
-	// Local settings
+// Height/width
+// Scale
+// Projection transform
+// Path translate
+    var margin = {top: 0, right: 0, bottom: 0, left: 0};
+        width = 600 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
 	var color = d3.scale.linear()
 	    .domain([0, 25, 50, 75, 100])
 	    .range([
@@ -33,14 +39,13 @@ slug:   mh370-nationalities
 
 	var projection = d3.geo.kavrayskiy7()
 	    // via https://github.com/d3/d3-geo-projection/
-	    .translate([width/2, height/2])
-	    .scale(95); // Revise so it isn't a magic number
+	    .translate([265, 185])
+	    .scale(125); // Revise so it isn't a magic number
 
 	var path = d3.geo.path()
 	    .projection(projection);
 
- // var svg = d3.select("#chart").append("svg")
-    var svg = d3.select("body")
+    var svg = d3.select("#chart").append("svg")
 	    .append("svg")
 	    .attr({
 	        "width": width,
@@ -91,7 +96,7 @@ slug:   mh370-nationalities
 	            .attr({
 	                "d": path,
 	                "class": "country",
-	                "transform": "translate(" + 0 + "," + margin.top + ")"
+	                "transform": "translate(" + 0 + "," + 0 + ")"
 	            })
 	            .style("fill", function(d) {
 	                var value = d.properties.value;
@@ -99,8 +104,22 @@ slug:   mh370-nationalities
 	            });
 	    });
 	});
-
 </script>
+<!-- <link rel="stylesheet" href="/assets/mh370-nationalities/fluoridation/assets/static/css/style.css"> -->
+
+<style>
+    path.country:hover {
+        fill: pink;
+        stroke: #000;
+        stroke-width: .5px;
+    }
+
+    noscript img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
 
 <noscript>
     <img src="image.png" alt="Chart for nationalities of the passengers on MH370" />
