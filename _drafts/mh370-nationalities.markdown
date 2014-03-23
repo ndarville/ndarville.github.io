@@ -11,12 +11,8 @@ slug:   mh370-nationalities
 <div id="chart"></div>
 
 <script src="/js/d3.min.js?v=3.2.8"></script>
-<script src="/assets/mh370-nationalities/fluoridation/assets/d3/d3.geo.projection.v0.min.js" charset="utf-8"></script>
-<script src="/assets/mh370-nationalities/fluoridation/assets/d3/topojson.v1.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!--
-    <script src="/assets/mh370-nationalities/fluoridation/assets/d3/settings.js" type="text/javascript" charset="utf-8"></script>
--->
+<script src="/assets/mh370-nationalities/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+<script src="/assets/mh370-nationalities/topojson.v1.min.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript" charset="utf-8">
 // Height/width
@@ -70,10 +66,10 @@ slug:   mh370-nationalities
 	};
 
 	// Load the data values
-	d3.csv("/assets/mh370-nationalities/fluoridation/global-fluoridation.csv", function(data) {
+	d3.csv("/assets/mh370-nationalities/data.csv", function(data) {
 
 	    // Geodata loaded into the csv scope
-	    d3.json("/assets/mh370-nationalities/fluoridation/assets/data/ne_110m_admin_0_countries_lakes.geojson", function(json) {
+	    d3.json("/assets/mh370-nationalities/ne_110m_admin_0_countries_lakes.geojson", function(json) {
 	        var dataLength = data.length,
 	            jsonLength = json.features.length;
 
@@ -109,9 +105,13 @@ slug:   mh370-nationalities
 	    });
 	});
 </script>
-<!-- <link rel="stylesheet" href="/assets/mh370-nationalities/fluoridation/assets/static/css/style.css"> -->
 
 <style>
+    line,
+    rect {
+        shape-rendering: crispEdges;
+    }
+
 /** path.country.unfilled:hover, */
     path.country.filled:hover {
         fill: pink;
