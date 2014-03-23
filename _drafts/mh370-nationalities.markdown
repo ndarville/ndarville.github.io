@@ -95,7 +95,8 @@ slug:   mh370-nationalities
 	            .append("path")
 	            .attr({
 	                "d": path,
-	                "class": "country",
+                 // "class": "country foo",
+	                "class": function(d) { return d.properties.value ? "country filled" : "country unfilled"; },
 	                "transform": "translate(" + 0 + "," + 0 + ")"
 	            })
 	            .style("fill", function(d) {
@@ -108,7 +109,8 @@ slug:   mh370-nationalities
 <!-- <link rel="stylesheet" href="/assets/mh370-nationalities/fluoridation/assets/static/css/style.css"> -->
 
 <style>
-    path.country:hover {
+/** path.country.unfilled:hover, */
+    path.country.filled:hover {
         fill: pink;
         stroke: #000;
         stroke-width: .5px;
