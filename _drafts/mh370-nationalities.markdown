@@ -27,6 +27,9 @@ slug:   mh370-nationalities
         width = 600 - margin.left - margin.right,
         height = 375 - margin.top - margin.bottom;
 
+    var mapValue = "total",
+        countryName = "country";
+
 	var color = d3.scale.linear()
 	    .domain([0, 25, 50, 75, 100])
 	    .range([
@@ -56,7 +59,7 @@ slug:   mh370-nationalities
 	// to be moved to chart.js
 	var cleanPrefix = function(string) {
 	    // Remove any "<", ">" or "~" prefixed to a number value
-	    // e.g. d3Helpers.cleanPrefixes(data[i].total);
+	    // e.g. d3Helpers.cleanPrefixes(data[i][mapValue]);
 	    prefix = string.substring(0, 1);
 
 	    if (prefix === "<" || prefix === ">" || prefix === "~") {
@@ -76,8 +79,8 @@ slug:   mh370-nationalities
 
 	        // data (values) forloop
 	        for (var i = 0; i < dataLength; i++) {
-	            var dataCountry = data[i].country,
-	                dataValue = cleanPrefix(data[i].total);
+	            var dataCountry = data[i][countryName],
+	                dataValue = cleanPrefix(data[i][mapValue]);
 
 	            // json (geodata) forloop
 	            for (var j = 0; j < jsonLength; j++) {
