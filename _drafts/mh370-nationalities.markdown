@@ -13,7 +13,7 @@ slug:   mh370-nationalities
 <!--
     <link href="/assets/mh370-nationalities/fluoridation/assets/static/css/d3.css" rel="stylesheet" media="screen" />
 -->
-<script src="/assets/mh370-nationalities/fluoridation/assets/d3/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/d3.min.js?v=3.2.8"></script>
 <script src="/assets/mh370-nationalities/fluoridation/assets/d3/d3.geo.projection.v0.min.js" charset="utf-8"></script>
 <script src="/assets/mh370-nationalities/fluoridation/assets/d3/topojson.v1.min.js" type="text/javascript" charset="utf-8"></script>
 
