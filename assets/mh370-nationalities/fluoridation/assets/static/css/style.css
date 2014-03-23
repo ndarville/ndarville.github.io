@@ -1,0 +1,27 @@
+#chart, svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+line,
+rect {
+    shape-rendering: crispEdges;
+}
+
+path.country:hover {
+    fill: pink !important;
+    stroke: #000;
+    stroke-width: .5px;
+}
+
+noscript img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Bar chart BEGIN */
+svg {
+    font: 10px sans-serif;
+}
