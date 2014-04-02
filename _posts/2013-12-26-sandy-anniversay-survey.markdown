@@ -5,7 +5,9 @@ date:   2013-12-26 16:00:00
 id:     3
 categories: blog
 excerpt: "An attempt to summarize as accessibly as possible Monmouth University Polling Institute's report: Displaced New Jerseyans Negative on Sandy Recovery Efforts—Many still need help making ends meet."
-redirect_from: /sandy-anniversary-survey
+redirect_from:
+    - /sandy-anniversary-survey
+    - /3
 ---
 <style>
     h4 { border: none; }
