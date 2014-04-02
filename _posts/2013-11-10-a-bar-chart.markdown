@@ -7,7 +7,7 @@ categories: blog
 tags:   tutorials
 excerpt: "An attempt to re-write Mike Bostock's own bar-chart tutorial, serving as an introduction to his charting framework D3."
 redirect_from:
-    - /bar-chart-1/
+    - /a-bar-chart/
     - /1/
 ---
 <div id="toc" class="box" markdown="1">
