@@ -6,8 +6,8 @@ id:     2
 categories: blog
 excerpt: "At the end of this post, you should be able to name all thirteen dwarves from The Hobbit."
 redirect_from:
-    - /naming-the-dwarves
-    - /2
+    - /naming-the-dwarves/
+    - /2/
 ---
 There are two great tools for remembering a long list:
 

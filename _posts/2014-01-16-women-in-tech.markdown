@@ -8,8 +8,8 @@ id:     4
 image:  true
 slug:   women-in-tech
 redirect_from:
-    - /women-in-tech
-    - /4
+    - women-in-tech/
+    - /4/
 ---
 A lot of effort is put into documenting life for women in the tech industry. **Tracy Chou** is leading a [project][project] that gathers data on the number---and ratio---of female software engineers working at tech companies.
 
