@@ -10,3 +10,6 @@ redcarpet:
 pygments: true
 
 limit_posts: 0
+
+gems:
+    - jekyll-redirect-from
