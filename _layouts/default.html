@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+    {% if site.enforce_ssl %}
+        <!--
+            redirect users to the https version of the website.
+            but: only check when on the production domain, as set in _config.yml.
+        -->
+        <script type="text/javascript">
+            var enforce = "{{ site.enforce_ssl }}";
+            if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+                window.location = window.location.toString().replace(/^http:/, "https:");
+        </script>
+    {% endif %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="">
@@ -24,14 +35,14 @@
         <meta property="og:description" content="{{ page.excerpt | markdownify | strip_html }}">
     {% endif %}
     {% if page.url %}
-        <meta property="og:url" content="{{ site.github.url }}{{ page.url }}">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     {% endif %}
     {% if page.image %}
         <meta name="twitter:card" content="summary_large_image">
-        <meta property="og:image" content="{{ site.github.url }}/assets/{{ page.slug }}/image.png">
+        <meta property="og:image" content="{{ site.url }}/assets/{{ page.slug }}/image.png">
     {% else %}
         <meta name="twitter:card" content="summary">
-        <meta property="og:image" content="{{ site.github.url }}/identicon.png">
+        <meta property="og:image" content="{{ site.url }}/identicon.png">
     {% endif %}
     </head>
     <body>
