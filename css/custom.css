@@ -83,7 +83,7 @@ table {
     caption-side: top; }
   table th,
   table td {
-    text-align: center;
+    text-align: right;
     padding: 0 0.5em; }
   table td,
   table th,

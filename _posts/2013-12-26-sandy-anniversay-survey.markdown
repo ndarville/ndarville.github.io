@@ -14,7 +14,10 @@ redirect_from:
 
     #displacement-col { background-color: #F5FAFA; }
     #income-col { background-color: beige; }
-    tr td:first-child { text-align: left; }
+    tr:first-child th:first-child,
+    tr td:first-child {
+        text-align: left;
+    }
 </style>
 
 <div id="toc" class="box" markdown="1">
