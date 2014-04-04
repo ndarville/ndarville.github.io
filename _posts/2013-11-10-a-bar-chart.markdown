@@ -22,6 +22,8 @@ redirect_from:
 5. [Further Reading](#further-reading)
 </div>
 
+<script src="/js/d3.min.js?v=3.2.8"></script>
+
 <h3 id="intro">Introduction</h3>
 
 <div class="box info">
