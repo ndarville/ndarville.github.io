@@ -1,6 +1,6 @@
 name: ndarville
 description: "Breaking it down"
-url: https://ndarville.com
+url: https://ndarville.github.io
 enforce_ssl: ndarville.github.io
 
 markdown: kramdown
