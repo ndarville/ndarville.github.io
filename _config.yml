@@ -3,7 +3,7 @@ description: "Breaking it down"
 url: https://ndarville.github.io
 enforce_ssl: ndarville.github.io
 
-feed: /feed/index.xml
+feed: https://ndarville.io/feed/index.xml
 
 author: N. Darville
 
