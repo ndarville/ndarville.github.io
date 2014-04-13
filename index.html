@@ -23,13 +23,8 @@ title: ndarville.github.io
 
     <h1>Untold Stories</h1>
     <ul class="posts untold">
-        <li><span>29 Nov 2013</span> &raquo; <a href="http://girlsattitudes.girlguiding.org.uk/about_the_survey/2013_survey.aspx">Girls versus Sexism in the U.K.</a></li>
-        <li><span>29 Nov 2013</span> &raquo; <a href="http://www.washingtonpost.com/blogs/answer-sheet/wp/2013/11/11/americas-veterans-who-they-are/">American Veterans by the Numbers</a></li>
-        <li><span>29 Nov 2013</span> &raquo; <a href="http://nyccah.org/hungersurvey">A Dickensian Tale of Hunger in NYC</a></li>
-        <li><span>15 Dec 2013</span> &raquo; <a href="https://twitter.com/greenhousenyt/status/411882225446055936">Poverty in America</a></li>
-        <li><span>19 Dec 2013</span> &raquo; <a href="http://www.coalitionforthehomeless.org/blog/entry/bloomberg-on-nyc-homelessness-a-total-lack-of-accountability/">Homelessness in NYC</a></li>
-        <li><span>22 Dec 2013</span> &raquo; <a href="http://www.lawyersgunsmoneyblog.com/2013/12/the-other-america">U.S. Wages in 2012</a></li>
-        <li><span>24 Jan 2014</span> &raquo; <a href="http://www.examiner.com/article/cdf-report-child-hunger-and-homelessness-rampant-the-us">The State of America&rsquo;s Children</a></li>
-        <li><span>13 Apr 2014</span> &raquo; <a href="https://www.ipcc.ch/report/ar5/wg3/">IPCC's 2014 Report on Mitigating Climate Change</a></li>
+    {% for story in site.data.stories %}
+        <li><span>{{ story.date }}</span> &raquo; <a href="{{ story.link }}">{{ story.title }}</a></li>
+    {% endfor %}
     </ul>
 </div>
