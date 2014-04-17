@@ -7,8 +7,9 @@ date:   2014-03-23 17:00:00
 id:     5
 image:  true
 slug:   mh370-nationalities
+redirect_from: /mh370-nationalities
 ---
-<div id="chart"></div>
+<div id="chart" class="map"></div>
 
 <script src="/js/d3.min.js?v=3.2.8"></script>
 <script src="/js/maps/d3.geo.projection.v0.min.js" charset="utf-8"></script>
@@ -26,15 +27,7 @@ slug:   mh370-nationalities
     var mapValue = "total",
         countryName = "country";
 
-	var color = d3.scale.linear()
-	    .domain([0, 25, 50, 75, 100])
-	    .range([
-	        "#d7191c",
-	        "#fdae61",
-	        "#ffffbf",
-	        "#abdda4",
-	        "#2b83ba"
-	    ]);
+	var color = "#2B83BA";
 
 	var projection = d3.geo.kavrayskiy7()
 	    // via https://github.com/d3/d3-geo-projection/
@@ -100,7 +93,7 @@ slug:   mh370-nationalities
 	            })
 	            .style("fill", function(d) {
 	                var value = d.properties.value;
-	                return value ? color(value) : "#000";
+	                return value ? color : "#000";
 	            });
 	    });
 	});
@@ -112,11 +105,14 @@ slug:   mh370-nationalities
         shape-rendering: crispEdges;
     }
 
+    path.country {
+        stroke: #FFF;
+        stroke-width: .5px;
+    }
+
 /** path.country.unfilled:hover, */
     path.country.filled:hover {
-        fill: pink;
-        stroke: #000;
-        stroke-width: .5px;
+        fill: #fdae61 !important;
     }
 
     noscript img {
