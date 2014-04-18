@@ -169,3 +169,68 @@ a, a:visited { color: $link-colour; }
         .highlight { width: 99%; }
         table { color: #000; }
     }
+
+@media print {
+    body {
+        background: #FFF !important;
+
+        .header,
+        .footer,
+        #history {
+            display: none;
+        }
+
+        a,
+        a:visited,
+        .post a {
+            background: none !important;
+            text-decoration: underline !important;
+            color: #000 !important;
+        }
+
+        table,
+        img,
+        ul,ol,li,
+        h1,h2,h3,h4,h5,h6,
+        code, pre,
+        blockquote,
+        .box,
+        .footnotes {
+            page-break-inside: avoid;
+        }
+
+        /** Converts relative URLs to absolute via CSS3
+        cf. alistapart.com/articles/goingtoprint/ */
+        /*#content a[href^="/"]:after {
+            content: " (http://modrenman.com" attr(href) ") ";
+        }*/
+
+        /** <HTML5 Boilerplate> */
+        abbr:after {
+            content: " (" attr(title) ")";
+        }
+
+        /** cf. css-discuss.incutio.com/wiki/Printing_Tables */
+        thead {
+            display: table-header-group;
+        }
+
+        p,
+        h1,h2,h3,h4,h5,
+        .box {
+            orphans: 3; widows: 3;
+        }
+
+        h1, h2, h3, h4, h5 {
+            page-break-after: avoid;
+        }
+        /** </HTML5 Boilerplate> */
+
+        code,
+        pre,
+        .box {
+            background: none !important;
+            border-color: $grey-colour;
+        }
+    }
+}

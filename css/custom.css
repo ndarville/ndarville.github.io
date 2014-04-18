@@ -132,3 +132,49 @@ sub {
 
   table {
     color: #000; } }
+@media print {
+  body {
+    background: #FFF !important;
+    /** Converts relative URLs to absolute via CSS3
+    cf. alistapart.com/articles/goingtoprint/ */
+    /*#content a[href^="/"]:after {
+        content: " (http://modrenman.com" attr(href) ") ";
+    }*/
+    /** <HTML5 Boilerplate> */
+    /** cf. css-discuss.incutio.com/wiki/Printing_Tables */
+    /** </HTML5 Boilerplate> */ }
+    body .header,
+    body .footer,
+    body #history {
+      display: none; }
+    body a,
+    body a:visited,
+    body .post a {
+      background: none !important;
+      text-decoration: underline !important;
+      color: #000 !important; }
+    body table,
+    body img,
+    body ul, body ol, body li,
+    body h1, body h2, body h3, body h4, body h5, body h6,
+    body code, body pre,
+    body blockquote,
+    body .box,
+    body .footnotes {
+      page-break-inside: avoid; }
+    body abbr:after {
+      content: " (" attr(title) ")"; }
+    body thead {
+      display: table-header-group; }
+    body p,
+    body h1, body h2, body h3, body h4, body h5,
+    body .box {
+      orphans: 3;
+      widows: 3; }
+    body h1, body h2, body h3, body h4, body h5 {
+      page-break-after: avoid; }
+    body code,
+    body pre,
+    body .box {
+      background: none !important;
+      border-color: #777777; } }
