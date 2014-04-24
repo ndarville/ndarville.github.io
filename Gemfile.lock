@@ -50,6 +50,8 @@ GEM
       jekyll (~> 1.4)
     jekyll-redirect-from (0.3.1)
       jekyll (~> 1.4)
+    jekyll-sitemap (0.2.0)
+      jekyll (~> 1.4)
     jemoji (0.1.0)
       gemoji (~> 1.5.0)
       html-pipeline (~> 1.5.0)
@@ -94,4 +96,5 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 17)
   jekyll-redirect-from
+  jekyll-sitemap
   sass (~> 3.2.13)

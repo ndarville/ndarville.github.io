@@ -19,6 +19,7 @@ limit_posts: 0
 
 gems:
     - jekyll-redirect-from
+    - jekyll-sitemap
 
 include: ['.htaccess']
 exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
