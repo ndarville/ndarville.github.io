@@ -2,7 +2,7 @@
 layout: post
 title:  "Women in Software Engineering by the Numbers"
 categories: blog
-description: "The male-to-female ratio of software engineers as a data visualization."
+excerpt: "The male-to-female ratio of software engineers as a data visualization."
 date:   2014-01-16 15:30:00
 id:     4
 image:  true
