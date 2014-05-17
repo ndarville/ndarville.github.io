@@ -3,9 +3,8 @@ description: "Breaking it down"
 url: https://ndarville.github.io
 enforce_ssl: ndarville.github.io
 
-feed: https://ndarville.github.io/feed/index.xml
-
-author: N. Darville
+author:
+    - N. Darville
 
 markdown: kramdown
 kramdown:
