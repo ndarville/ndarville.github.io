@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Making Sense of the New York Times's Digital Subscriptions"
+categories: blog
+excerpt: "Breaking down the New York Times's subscriptios in plain English."
+date:   2014-05-29 17:00:00
+id:     5
+image:  true
+slug:   nyt-subs
+redirect_from:
+    - nyt-subs/
+    - /5/
+---
+I just went to order a <i>New York Times subscription</i>, and I have to wonder how anyone is supposed to make sense of this crap:
+
+![Overview of subscriptions](/assets/nyt-subs/overview.png)
+
+![First sub](/assets/nyt-subs/sub1.png)
+![Second sub](/assets/nyt-subs/sub2.png)
+![Third sub](/assets/nyt-subs/sub3.png)
+
+
+So I've broken it down for normal people:
+
+Access | NYT + Smartphone Apps | NYT Tablet Apps | All Digital Access
+:------|:---------------------:|:---------------:|:------------------:
+NYTimes.com on any device.          | Yes | Yes | Yes
+NYTimes app for phones.             | Yes | _   | Yes
+NYTimes app for tablets.            | _   | Yes | Yes
+Today’s Paper web app for desktops. | Yes | Yes | Yes
+Today’s Paper web app for tablets.  | _   | Yes | Yes
+NYT Now app.                        | Yes | Yes | Yes
+TimesMachine Archive.               | Yes | Yes | Yes
+What We're Reading.                 | Yes | Yes | Yes

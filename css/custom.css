@@ -33,6 +33,11 @@ mark {
   background-color: #ffffaa;
   padding: 0 3px; }
 
+img {
+  margin: 1em auto;
+  border: 2px solid #A00;
+  display: block; }
+
 .box {
   width: 85%;
   margin: 1em auto;
