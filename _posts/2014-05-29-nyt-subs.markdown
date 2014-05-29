@@ -13,11 +13,11 @@ redirect_from:
 ---
 I just went to order a <i>New York Times subscription</i>, and I have to wonder how anyone is supposed to make sense of this crap:
 
-![Overview of subscriptions](/assets/nyt-subs/overview.png)
+![Overview of subscriptions](/assets/nyt-subs/overview.PNG)
 
-![First sub](/assets/nyt-subs/sub1.png)
-![Second sub](/assets/nyt-subs/sub2.png)
-![Third sub](/assets/nyt-subs/sub3.png)
+![First sub](/assets/nyt-subs/sub1.PNG)
+![Second sub](/assets/nyt-subs/sub2.PNG)
+![Third sub](/assets/nyt-subs/sub3.PNG)
 
 
 So I've broken it down for normal people:
