@@ -7,7 +7,7 @@ date:   2014-05-29 17:00:00
 id:     5
 image:  true
 slug:   nyt-subs
-redirect_from:
+redirect-from:
     - nyt-subs/
     - /5/
 ---
@@ -25,10 +25,10 @@ So I've broken it down for normal people:
 Access | NYT + Smartphone Apps | NYT Tablet Apps | All Digital Access
 :------|:---------------------:|:---------------:|:------------------:
 NYTimes.com on any device.          | Yes | Yes | Yes
-NYTimes app for phones.             | Yes | _   | Yes
-NYTimes app for tablets.            | _   | Yes | Yes
+NYTimes app for phones.             | Yes | -   | Yes
+NYTimes app for tablets.            | -   | Yes | Yes
 Today’s Paper web app for desktops. | Yes | Yes | Yes
-Today’s Paper web app for tablets.  | _   | Yes | Yes
+Today’s Paper web app for tablets.  | -   | Yes | Yes
 NYT Now app.                        | Yes | Yes | Yes
 TimesMachine Archive.               | Yes | Yes | Yes
 What We're Reading.                 | Yes | Yes | Yes
