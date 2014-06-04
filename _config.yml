@@ -24,10 +24,7 @@ include: ['.htaccess']
 exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
 
 prose:
-    # rooturl: '_posts'
     siteurl: 'https://ndarville.github.io'
-    # relativeLinks: 'http://prose.github.io/starter/links.jsonp'
-    # media: '/assets/'
     metadata:
         _drafts:
             - name: layout
