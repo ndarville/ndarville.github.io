@@ -41,7 +41,7 @@ prose:
             - name: date
               field:
                   element: hidden
-            - name: "excerpt"
+            - name: excerpt
               field:
                   element: text
                   placeholder: Use 200 characters at most.
