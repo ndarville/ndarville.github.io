@@ -38,19 +38,24 @@ prose:
             - name: title
               field:
                   element: text
+                  value: ""
             - name: date
               field:
                   element: hidden
+                  value: ""
             - name: excerpt
               field:
                   element: text
+                  value: ""
                   placeholder: Use 200 characters at most.
             - name: id
               field:
                   element: hidden
+                  value: ""
             - name: tags
               field:
                   element: hidden
+                  value: ""
     ignore:
         - .gitignore
         - .htaccess
