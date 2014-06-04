@@ -22,3 +22,29 @@ gems:
 
 include: ['.htaccess']
 exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
+
+prose:
+    # rooturl: '_posts'
+    siteurl: 'https://ndarville.github.io'
+    # relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+    # media: '/assets/'
+    ignore:
+        - .gitignore
+        - .htaccess
+        - _config.yml
+        - favicon.ico
+        - feed.atom
+        - Gemfile
+        - Gemfile.lock
+        - identicon.png
+        - README.md
+        - robots.txt
+        - 404.html
+        - index.html
+        - /_layouts
+        - /_includes
+        - /_site
+        - /assets
+        - /css
+        - /js
+        - /links
