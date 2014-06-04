@@ -48,9 +48,6 @@ prose:
             - name: id
               field:
                   element: hidden
-            - name: id
-              field:
-                  element: hidden
             - name: tags
               field:
                   element: hidden
