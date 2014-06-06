@@ -61,38 +61,46 @@ prose:
               field:
                   element: hidden
                   value: post
-            - name: categories
-              field:
-                  element: hidden
-                  value: blog
             - name: title
               field:
                   element: text
                   value: ""
+                  label: Title
             - name: date
               field:
                   element: text
                   value: ""
+                  label: date
+                  placeholder: YYYY-MM-DD HH:MM:SS
             - name: excerpt
               field:
                   element: text
                   value: ""
+                  label: Excerpt/Description
                   placeholder: Use 200 characters at most.
             - name: slug
               field:
                   element: text
                   value: ""
+                  label: slug
             - name: id
               field:
                   element: number
                   value: ""
+                  label: id
             - name: tags
               field:
                   element: multiselect
+                  label: tags
                   options:
                       - name: Tutorials
                         value: tutorials
                   alterable: true
+            - name: categories
+              field:
+                  element: hidden
+                  value: blog
+                  label: Categories
 
     ignore:
         - .gitignore
