@@ -70,7 +70,7 @@ prose:
               field:
                   element: text
                   value: ""
-                  label: date
+                  label: Date
                   placeholder: YYYY-MM-DD HH:MM:SS
             - name: excerpt
               field:
@@ -82,16 +82,16 @@ prose:
               field:
                   element: text
                   value: ""
-                  label: slug
+                  label: Slug
             - name: id
               field:
                   element: number
                   value: ""
-                  label: id
+                  label: ID
             - name: tags
               field:
                   element: multiselect
-                  label: tags
+                  label: Tags
                   options:
                       - name: Tutorials
                         value: tutorials
